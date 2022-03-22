@@ -1,27 +1,33 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-  }
+}
   
-  .navbar {
+.navbar {
     overflow: hidden;
     background-color: #c7d0d8;
-  }
-  
-  .navbar a {
+    border-radius: 5px;
+}
+
+.navbar a {
     float: left;
     font-size: 16px;
     color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
+}
+
+.logo {
+    float: left;
+    margin-left: 15px;
+}
   
-  .dropdown {
+.dropdown {
     float: left;
     overflow: hidden;
-  }
+}
   
-  .dropdown .dropbtn {
+.dropdown .dropbtn {
     font-size: 16px;  
     border: none;
     outline: none;
@@ -30,85 +36,102 @@ body {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
-  }
+}
   
-  .navbar a:hover, .dropdown:hover .dropbtn {
+.navbar .dropdown button:hover, .dropbtn {
     background-color: #037be6;
-  }
+    color: #fff;
+}
+
+.navbar .home a:hover {
+    background-color: #037be6;
+    color: #fff;
+}
   
-  .dropdown-content {
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  }
+}
   
-  .dropdown-content a {
+.dropdown-content a {
     float: none;
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
-  }
+}
   
-  .dropdown-content a:hover {
+.dropdown-content a:hover {
     background-color: #ddd;
-  }
+}
   
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
-  }
+}
   
   
-  .search-container input {
-    float: left;
-    padding: 3px 5px;
+.search-container input {
+    position: relative;
+    padding: 4px 5px;
     margin-top: 8px;
     margin-right: 10px;
     background: #f9f9f9;
     font-size: 17px;
     border: none;
     cursor: pointer;
-  }
+    left: 300px;
+}
   
-  .search-container button {
-    float: right;
-    padding: 3px 11px;
+.search-container button {
+    position: relative;
+    padding: 4px 5px;
     margin-top: 8px;
     margin-right: 16px;
     background: #ebedeb;
     font-size: 17px;
     border: none;
     cursor: pointer;
-  }
+    left: 295px;
+}
   
-  .search-container button:hover {
-      background:#f9f9f9
-  }
+.search-container button:hover {
+    background:#f9f9f9
+}
   
-  .notification {
-    background-color: #c7d0d8;
-    color: white;
-    text-decoration: none;
-    padding: 15px 26px;
-    position: relative;
-    display: inline-block;
-    border-radius: 2px;
-  }
-  
-  .notification:hover {
-    background: red;
-  }
-  
-  .notification .badge {
+.navbar .notification {
     position: absolute;
-    top: -10px;
-    right: -10px;
-    padding: 5px 10px;
-    border-radius: 50%;
-    background: red;
-    color: white;
-  }
+    background-color: #c7d0d8;
+    color: black;
+    padding: 8px 8px;
+    text-decoration: none;
+    display: inline-block;
+    right: 60px;
+    top: 14px;
+}
+
+.navbar .sair {
+    position: absolute;
+    background-color: #c7d0d8;
+    color: black;
+    text-decoration: none;
+    padding: 8px 8px;
+    display: inline-block;
+    right: 20px;
+    top: 14px;
+}
+
+.sair:hover {
+    background: #037be6;
+    color: #fff;
+}
+
+.notification:hover {
+    background: #037be6;
+    color: #fff;
+}
+

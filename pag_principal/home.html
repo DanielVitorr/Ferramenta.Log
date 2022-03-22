@@ -4,57 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d84f7052ba.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/home.css" text="text.css">
     <title>Home</title>
 </head>
 <body>
-    <div class="navbar">
+<div class="navbar">
+    <div class="logo">
+        <img src="../img/logodamasio.png" alt="damasio" height="40">
+    </div>
+    <div class="home">
+        <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+    </div>
         <div class="dropdown">
-          <button class="dropbtn">Atividades 
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">Nova Atividade</a>
-            <a href="#">Minhas Atividades</a>
-            <a href="#">Atividades Expiradas</a>
-           </div>
-          </div>
-       <div class="navbar">
-         <div class="dropdown">
-          <button class="dropbtn">Prevenção e Perdas
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">Nova solicitação</a>
-            <a href="#">Solicitações Pendendes</a>
-            <a href="#">Solicitações Fechadas</a>
-            <a href="#">Solicitações Aprovadas</a>
-            <a href="#">Solicitações Negadas</a>
-         </div>
+            <button class="dropbtn">Atividades 
+                <i class="fa fa-caret-down"></i>
+            </button>
+                <div class="dropdown-content">
+                    <a href="#">Nova Atividade</a>
+                    <a href="#">Minhas Atividades</a>
+                    <a href="#">Atividades Expiradas</a>
+                </div>
         </div>
-      <div class="navbar">
-         <div class="dropdown">
-          <button class="dropbtn">Torre de controle
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">Tarefa 1</a>
-            <a href="#">Tarefa 2</a>
-            <a href="#">Tarefa 3</a>
-            <a href="#">Tarefa 4</a>
-            <a href="#">Tarefa 5</a>
-           </div>
-          </div>
-        <div class="search-container">
-          <form action="/action_page.php">
-            <input type="text" placeholder="Pesquisar" name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
-           <div>
-           <a href="#" class="notification">
-        <span>Puxar icone do banco de icone</span>
-        <span class="badge">1</span>
-      </a> 
-        </div>
+        <div class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Prevenção e Perdas
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                    <div class="dropdown-content">
+                        <a href="#">Nova solicitação</a>
+                        <a href="#">Solicitações Pendendes</a>
+                        <a href="#">Solicitações Fechadas</a>
+                        <a href="#">Solicitações Aprovadas</a>
+                        <a href="#">Solicitações Negadas</a>
+                    </div>
+            </div>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn">Torre de controle
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                        <div class="dropdown-content">
+                            <a href="#">Tarefa 1</a>
+                            <a href="#">Tarefa 2</a>
+                            <a href="#">Tarefa 3</a>
+                            <a href="#">Tarefa 4</a>
+                            <a href="#">Tarefa 5</a>
+                        </div>
+                </div>
+                <div class="search-container">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Pesquisar" name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div>
+                    <a href="#" class="notification">
+                        <span><i class="fa-solid fa-bell"></i></span>
+                    </a>
+                </div>
+                <div>
+                    <a href="../index.html" class="sair">
+                        <span><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                    </a>
+                </div>
+            </div>
+    </div>
+</div>
 </body>
 </html>
