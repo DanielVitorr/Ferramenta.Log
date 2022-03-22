@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d84f7052ba.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #text{display:none;color:red;}
+    </style>
+    <div class="login-box">
+        <img src="./img/logodamasio.png" alt="damasio" id="img" height="70">
+        <br>
+        <div class="user-box">
+            <input type="text" name="usuario" id="myInput" required>
+            <label for="usuario"><i class="fa-solid fa-user"></i> Usuário</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="password" id="myPass" required>
+            <label for="password"><i class="fa-solid fa-key"></i> Senha</label>
+        </div>
+        <div>
+            <p id="text"><strong> Caps Lock ativado!</strong></p>
+        </div>
+        <div class="view-box">
+            <input type="checkbox" onclick="myFunction()">
+            <label>Visualizar Senha</label>
+        </div>
+        <br>
+        <a href="./pag_principal/home.html">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>ENTRAR</strong>
+        </a>
+    </div>
+
+    <script>
+        var input = document.getElementById("myInput");
+        var inputPass = document.getElementById("myPass")
+        var text = document.getElementById("text");
+
+        input.addEventListener("keyup", function(event) {
+        
+        if (event.getModifierState("CapsLock")) {
+            text.style.display = "block";
+          } else {
+            text.style.display = "none"
+          }
+        });
+
+        inputPass.addEventListener("keyup", function(event) {
+        
+        if (event.getModifierState("CapsLock")) {
+            text.style.display = "block";
+          } else {
+            text.style.display = "none"
+          }
+        });
+
+        function myFunction() {
+        var view = document.getElementById("myPass");
+        if (view.type === "password") {
+            view.type = "text";
+        } else {
+            view.type = "password";
+        }
+        }
+    </script>
+</body>
+</html>
