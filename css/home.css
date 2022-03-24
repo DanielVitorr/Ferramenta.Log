@@ -1,11 +1,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-  
+
 .navbar {
     overflow: hidden;
     background-color: #c7d0d8;
     border-radius: 5px;
+    display: flex;
+    flex-direction: row;
 }
 
 .navbar a {
@@ -28,15 +30,15 @@ body {
     margin-left: 15px;
     border-radius: 5px;
 }
-  
+
 .dropdown {
     float: left;
     overflow: hidden;
     border-radius: 5px;
 }
-  
+
 .dropdown .dropbtn {
-    font-size: 16px;  
+    font-size: 16px;
     border: none;
     outline: none;
     color: black;
@@ -46,7 +48,7 @@ body {
     margin: 0;
     border-radius: 5px;
 }
-  
+
 .navbar .dropdown button:hover, .dropbtn {
     background-color: #037be6;
     color: #fff;
@@ -57,7 +59,7 @@ body {
     color: #fff;
     border-radius: 5px;
 }
-  
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -67,7 +69,7 @@ body {
     z-index: 1;
     border-radius: 5px;
 }
-  
+
 .dropdown-content a {
     float: none;
     color: black;
@@ -77,67 +79,67 @@ body {
     text-align: left;
     border-radius: 5px;
 }
-  
+
 .dropdown-content a:hover {
     background-color: #ddd;
 }
-  
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
-  
-  
+
+.search-container {
+    margin-left: auto;
+}
+
+
 .search-container input {
-    position: relative;
     padding: 5px 5px;
     margin-top: 8px;
-    margin-right: 10px;
+    margin-right: -4px;
     background: #f9f9f9;
     font-size: 17px;
     border: none;
     cursor: pointer;
-    left: 285px;
-    border-radius: 5px;
 }
-  
+
 .search-container button {
-    position: relative;
     padding: 5px 6px;
     margin-top: 8px;
-    margin-right: 16px;
+    margin-right: 11px;
     background: #ebedeb;
     font-size: 17px;
     border: none;
     cursor: pointer;
-    left: 280px;
-    border-radius: 5px;
 }
-  
+
 .search-container button:hover {
     background:#f9f9f9
 }
-  
+
+.end-buttons {
+    margin-top: 8px;
+    height: 30px;
+    width: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
 .navbar .notification {
-    position: absolute;
     background: #ebedeb;
     color: black;
     padding: 6px 7px;
     text-decoration: none;
-    display: inline-block;
-    right: 60px;
-    top: 16px;
     border-radius: 5px;
 }
 
 .navbar .sair {
-    position: absolute;
     background: #ebedeb;
     color: black;
     text-decoration: none;
     padding: 6px 7px;
-    display: inline-block;
-    right: 20px;
-    top: 16px;
     border-radius: 5px;
 }
 
@@ -149,77 +151,7 @@ body {
     background: #f9f9f9;
 }
 
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .sair .tooltiptext {
-    visibility: hidden;
-    width: 50px;
-    background-color: #555;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: -110%;
-    left: 50%;
-    margin-left: -25px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .sair .tooltiptext::after {
-    position: absolute;
-    top: -30%;
-    left: 30%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  
-  .sair:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .notification .tooltiptext {
+.notification .tooltiptext {
     visibility: hidden;
     width: 100px;
     background-color: #555;
@@ -229,24 +161,55 @@ body {
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    bottom: -110%;
-    left: 50%;
-    margin-left: -50px;
+    top: 50px;
+    right: 20px;
+    margin-left: -60px;
     opacity: 0;
     transition: opacity 0.3s;
-  }
-  
-  .notification .tooltiptext::after {
+} 
+
+.notification .tooltiptext::after {
     position: absolute;
-    top: -30%;
-    left: 50%;
+    top: 80px;
+    left: 110px;
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-  }
-  
-  .notification:hover .tooltiptext {
+}
+
+.notification:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-  }
+}
+.sair .tooltiptext {
+    visibility: hidden;
+    width: 50px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    right: 8px;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+} 
+
+.sair .tooltiptext::after {
+    position: absolute;
+    top: 80px;
+    left: 110px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.sair:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
