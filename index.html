@@ -15,7 +15,6 @@
     </style>
     <div class="login-box">
         <img src="" alt="" id="img" height="70">
-        <br>
         <div class="user-box">
             <input type="text" name="usuario" id="myInput" required>
             <label for="usuario"><i class="fa-solid fa-user"></i> Usuário</label>
@@ -24,14 +23,14 @@
             <input type="password" name="password" id="myPass" required>
             <label for="password"><i class="fa-solid fa-key"></i> Senha</label>
         </div>
-        <div>
-            <p id="text"><strong> Caps Lock ativado!</strong></p>
-        </div>
+        <p id="text"><strong> Caps Lock ativado!</strong></p>
         <div class="view-box">
             <input type="checkbox" onclick="myFunction()">
             <label>Visualizar Senha</label>
         </div>
-        <br>
+        <div class="registrar">
+            <button id="Registrar-se">Registrar-se</button>
+        </div>
         <a href="./pag_principal/home.html">
             <span></span>
             <span></span>
@@ -39,6 +38,24 @@
             <span></span>
             <strong>ENTRAR</strong>
         </a>
+    </div>
+    <br>
+    <div class="register-box">
+        <div class="reg-user-box">
+            <input type="text" name="usuario" id="user-register" required>
+            <label for="usuario"><i class="fa-solid fa-user"></i> Usuário</label>
+        </div>
+        <div class="reg-password-box">
+            <input type="password" name="password" id="pass-register" required>
+            <label for="password"><i class="fa-solid fa-key"></i> Senha</label>
+        </div>
+        <div class="reg-password-box">
+            <input type="password" name="conf-password" id="pass-register" required>
+            <label for="conf-password"><i class="fa-solid fa-key"></i> Confirme sua Senha</label>
+        </div>
+        <div>
+            <button id="login">Login</button>
+        </div>
     </div>
 
     <script>

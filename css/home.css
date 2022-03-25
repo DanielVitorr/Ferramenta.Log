@@ -10,6 +10,21 @@ body {
     flex-direction: row;
 }
 
+.second-navbar {
+    overflow: hidden;
+    background-color: #c7d0d8;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.second-navbar h1 {
+    font-size: 17px;
+    margin-left: 10px;
+    font-family: arial, Helvetica, sans-serif;
+}
+
 .navbar a {
     float: left;
     font-size: 16px;
