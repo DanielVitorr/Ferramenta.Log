@@ -1,107 +1,125 @@
-/* html {
+html {
     height: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-size: sans-serif;
-    background: radial-gradient(circle, #3065ac, #3065ac, #3065ac, #a6a6a6);
+    background-color: #000;
+    overflow: hidden;
 }
 
-.login-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 30%;
-    padding: 60px;
-    transform: translate(-50%, -50%);
-    background: #d3d3d3;
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
-    border-radius: 10px;
+.tela-login {
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 37%;
+    margin-right: 37%;
+    padding: 90px;
+    background: linear-gradient(#0747a1,#1e97f3);
+    animation-name: tela;
+    animation-duration: 1s;
 }
 
-.login-box img {
-    margin: 2px 10px 50px 50px;
-    padding: 0;
+.tela-login h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20%;
+    color: #fff;
+    font-size: 36px;
 }
 
-.login-box .user-box {
+.tela-login p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -5%;
+    color: #fff;
+    font-size: 15px;
+}
+
+.tela-login .botao-escolha {
     position: relative;
+    width: 100%;
+    margin-bottom: 15%;
+    margin-top: 30%;
 }
 
-.login-box .user-box input {
+.tela-login .button-log {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
     color: #000;
-    margin-bottom: 30px;
-    border: none;
-    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
     outline: none;
-    background: transparent;
+    border-radius: 20px;
 }
 
-.login-box .user-box i {
-    position: absolute;
-    top: 0;
-    left: -20px;
+.tela-login .button-register {
+    width: 100%;
     padding: 10px 0;
     font-size: 16px;
     color: #000;
-    pointer-events: none;
-    transition: .5s;
+    margin-bottom: 10px;
+    outline: none;
+    border-radius: 20px;
 }
 
-.login-box .user-box label {
+.login-box {
+    margin-top: -450px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 37%;
+    margin-right: 37%;
+    padding: 130px;
+    background: linear-gradient(#0747a1,#90cbf9);
+    opacity: 0;
+}
+
+.register-box {
+    margin-top: -450px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 37%;
+    margin-right: 37%;
+    padding: 130px;
+    background: linear-gradient(#0747a1,#90cbf9);
+    opacity: 0;
+}
+
+@keyframes tela {
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+
+    }
+}
+
+.squares li {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255, 0.15);
+    display: block;
     position: absolute;
-    top: 0;
-    left: 20px;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #000;
-    pointer-events: none;
-    transition: .5s;
+    bottom: -40px;
+    animation: up 2s infinite;
+    animation-direction: alternate;
 }
 
-.login-box .view-box input {
-    position: relative;
-    color: #000;
-    cursor: pointer;
+@keyframes up {
+    form {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-700px) rotate(960deg);
+    }
 }
-
-.login-box .view-box label {
-    color: #000;
-}
-
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
-    top: -20px;
-    left: 10;
-    color: #000;
-    font-size: 15px;
-}
-
-.login-box a {
-    position: relative;
-    display: inline-block;
-    padding: 5px 10px;
-    color: #fff;
-    font-size: 15px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 10px;
-    letter-spacing: 4px;
-    border: 1px solid #0047ab;
-    background-color: #0047ab;
-}
-
-.login-box a:hover {
-    background: #0047ab;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #0047ab, 0 0 25px #0047ab;
-} */

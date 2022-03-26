@@ -5,14 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d84f7052ba.js" crossorigin="anonymous"></script>
+    <script src="./js/home.js" type="text.js"></script>
     <link rel="stylesheet" href="./css/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Login</title>
 </head>
 <body>
-    <style>
-        #text{display:none;color:red;}
-    </style>
+    <ul class="squares"></ul>
+    <div class="tela-login">
+        <img src="" alt="">
+        <div><h1>GIDT's</h1></div>
+        <div><p>Sua ferramenta de gestão de taferas</p></div>
+        <div class="botao-escolha">
+            <button class="button-log"><strong>Login</strong></button>
+            <button class="button-register"><strong>Registrar-se</strong></button>
+        </div>
+    </div>
     <div class="login-box">
         <img src="" alt="" id="img" height="70">
         <div class="user-box">
@@ -23,7 +31,6 @@
             <input type="password" name="password" id="myPass" required>
             <label for="password"><i class="fa-solid fa-key"></i> Senha</label>
         </div>
-        <p id="text"><strong> Caps Lock ativado!</strong></p>
         <div class="view-box">
             <input type="checkbox" onclick="myFunction()">
             <label>Visualizar Senha</label>
@@ -32,14 +39,9 @@
             <button id="Registrar-se">Registrar-se</button>
         </div>
         <a href="./pag_principal/home.html">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
             <strong>ENTRAR</strong>
         </a>
     </div>
-    <br>
     <div class="register-box">
         <div class="reg-user-box">
             <input type="text" name="usuario" id="user-register" required>
@@ -50,45 +52,50 @@
             <label for="password"><i class="fa-solid fa-key"></i> Senha</label>
         </div>
         <div class="reg-password-box">
-            <input type="password" name="conf-password" id="pass-register" required>
+            <input type="password" name="conf-password" id="pass-register2" required>
             <label for="conf-password"><i class="fa-solid fa-key"></i> Confirme sua Senha</label>
+        </div>
+        <div class="">
+            <input type="checkbox" onclick="myFunction2() || myFunction3()">
+            <label>Visualizar Senha</label>
+        </div>
+        <div>
+            <button type="submit">Registrar</button>
         </div>
         <div>
             <button id="login">Login</button>
         </div>
     </div>
 
-    <script>
-        var input = document.getElementById("myInput");
-        var inputPass = document.getElementById("myPass")
-        var text = document.getElementById("text");
+    
 
-        input.addEventListener("keyup", function(event) {
-        
-        if (event.getModifierState("CapsLock")) {
-            text.style.display = "block";
-          } else {
-            text.style.display = "none"
-          }
-        });
+    <script src="./js/login.js"></script>
 
-        inputPass.addEventListener("keyup", function(event) {
-        
-        if (event.getModifierState("CapsLock")) {
-            text.style.display = "block";
-          } else {
-            text.style.display = "none"
-          }
-        });
-
+    <!-- <script>
         function myFunction() {
         var view = document.getElementById("myPass");
         if (view.type === "password") {
             view.type = "text";
-        } else {
-            view.type = "password";
+            } else {
+                view.type = "password";
+            }
         }
+        function myFunction2() {
+        var view = document.getElementById("pass-register");
+        if (view.type === "password") {
+            view.type = "text";
+            } else {
+                view.type = "password";
+            }
         }
-    </script>
+        function myFunction3() {
+        var view = document.getElementById("pass-register2");
+        if (view.type === "password") {
+            view.type = "text";
+            } else {
+                view.type = "password";
+            }
+        }
+    </script> -->
 </body>
 </html>
