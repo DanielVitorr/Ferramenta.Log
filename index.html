@@ -11,63 +11,64 @@
     <title>Login</title>
 </head>
 <body>
-<div class="container">
-    <!-- <ul class="squares"></ul> -->
-    <div class="login-box">
-        <img src="" alt="" id="img" height="70">
-        <div class="user-box">
-            <input type="text" name="usuario" id="myInput" required>
-            <label for="usuario"><i class="fa-solid fa-user"></i> Usuário</label>
+    <div class="container_tela">
+        <h1>GRIFO</h1>
+        <p>Sua ferramenta de gestão de atividades</p>
+        <div class="mySidenav">
+            <div class="etiquetaLogin">
+                <h2>Login</h2>
+            </div>
+            <div class="etiquetaCadastro">
+                <h2>Cadastra-se</h2>
+            </div>
         </div>
-        <div class="user-box">
-            <input type="password" name="password" id="myPass" required>
-            <label for="password"><i class="fa-solid fa-key"></i> Senha</label>
-        </div>
-        <div class="view-box">
-            <input type="checkbox" onclick="myFunction()">
-            <label>Visualizar Senha</label>
-        </div>
-        <div class="registrar">
-        <a href="Registro.html">
-            <strong>Registrar-se</strong>
-        </a>
-        </div>
-        <a href="./pag_principal/home.html">
-            <strong>ENTRAR</strong>
-        </a>
     </div>
-</div>
     
-    
-    
+    <div class="container">
+        <div class="login-box">
+            <img src="" alt="" id="img" height="70">
+            <div class="user-box">
+                <input type="text" name="usuario" id="myInput" required>
+                <label for="usuario"><i class="fa-solid fa-user"></i> Usuário</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" id="myPass" required>
+                <label for="password"><i class="fa-solid fa-key"></i> Senha</label>
+            </div>
+            <div class="view-box">
+                <input type="checkbox" onclick="myFunction()">
+                <label>Visualizar Senha</label>
+            </div>
+            <a href="./pag_principal/home.html">
+                <strong>ENTRAR</strong>
+            </a>
+        </div>
+
+        <div class="register-box">
+            <form action="" method="post">
+                <div class="reg-user-box">
+                    <input type="text" name="usuario" id="user-register" required>
+                    <label for="usuario"><i class="fa-solid fa-user"></i> Usuário</label>
+                </div>
+                <div class="reg-password-box">
+                    <input type="email" name="email" id="email-register" required>
+                    <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+                </div>
+                <div class="reg-password-box">
+                    <input type="password" name="conf-password" id="pass-register2" required>
+                    <label for="conf-password"><i class="fa-solid fa-key"></i> Senha</label>
+                </div>
+                <div class="">
+                    <input type="checkbox" onclick="myFunction3()">
+                    <label>Visualizar Senha</label>
+                </div>
+                <div>
+                    <button type="submit">Cadastra-se</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="./js/login.js"></script>
-
-    <!-- <script>
-        function myFunction() {
-        var view = document.getElementById("myPass");
-        if (view.type === "password") {
-            view.type = "text";
-            } else {
-                view.type = "password";
-            }
-        }
-        function myFunction2() {
-        var view = document.getElementById("pass-register");
-        if (view.type === "password") {
-            view.type = "text";
-            } else {
-                view.type = "password";
-            }
-        }
-        function myFunction3() {
-        var view = document.getElementById("pass-register2");
-        if (view.type === "password") {
-            view.type = "text";
-            } else {
-                view.type = "password";
-            }
-        }
-    </script> -->
 </body>
 </html>
