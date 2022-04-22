@@ -11,16 +11,8 @@
     <title>Login</title>
 </head>
 <body>
-    <ul class="squares"></ul>
-    <div class="tela-login">
-        <img src="" alt="">
-        <div><h1>GIDT's</h1></div>
-        <div><p>Sua ferramenta de gestão de taferas</p></div>
-        <div class="botao-escolha">
-            <button class="button-log"><strong>Login</strong></button>
-            <button class="button-register"><strong>Registrar-se</strong></button>
-        </div>
-    </div>
+<div class="container">
+    <!-- <ul class="squares"></ul> -->
     <div class="login-box">
         <img src="" alt="" id="img" height="70">
         <div class="user-box">
@@ -36,38 +28,16 @@
             <label>Visualizar Senha</label>
         </div>
         <div class="registrar">
-            <button id="Registrar-se">Registrar-se</button>
+        <a href="Registro.html">
+            <strong>Registrar-se</strong>
+        </a>
         </div>
         <a href="./pag_principal/home.html">
             <strong>ENTRAR</strong>
         </a>
     </div>
-    <div class="register-box">
-    <form action="http://localhost:1010/user" method="post">
-        <div class="reg-user-box">
-            <input type="text" name="usuario" id="user-register" required>
-            <label for="usuario"><i class="fa-solid fa-user"></i> Usuário</label>
-        </div>
-        <div class="reg-password-box">
-            <input type="password" name="password" id="pass-register" required>
-            <label for="password"><i class="fa-solid fa-key"></i> Senha</label>
-        </div>
-        <div class="reg-password-box">
-            <input type="password" name="conf-password" id="pass-register2" required>
-            <label for="conf-password"><i class="fa-solid fa-key"></i> Confirme sua Senha</label>
-        </div>
-        <div class="">
-            <input type="checkbox" onclick="myFunction2() || myFunction3()">
-            <label>Visualizar Senha</label>
-        </div>
-        <div>
-            <button type="submit">Registrar</button>
-        </div>
-        <div>
-            <button id="login">Login</button>
-        </div>
-    </form>
-    </div>
+</div>
+    
     
     
 

@@ -1,90 +1,27 @@
-/* html {
+html {
     height: 100%;
 }
 
 body {
-    background-color: #000;
     overflow: hidden;
 }
 
-.tela-login {
-    margin-top: 100px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 37%;
-    margin-right: 37%;
-    padding: 90px;
-    background: linear-gradient(#0747a1,#1e97f3);
-    animation-name: tela;
-    animation-duration: 1s;
-}
-
-.tela-login h1 {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -20%;
-    color: #fff;
-    font-size: 36px;
-}
-
-.tela-login p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: -5%;
-    color: #fff;
-    font-size: 15px;
-}
-
-.tela-login .botao-escolha {
-    position: relative;
-    width: 100%;
-    margin-bottom: 15%;
-    margin-top: 30%;
-}
-
-.tela-login .button-log {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #000;
-    margin-bottom: 20px;
-    outline: none;
-    border-radius: 20px;
-}
-
-.tela-login .button-register {
-    width: 100%;
-    padding: 10px 0;
-    font-size: 16px;
-    color: #000;
-    margin-bottom: 10px;
-    outline: none;
-    border-radius: 20px;
+    height: 100vh;
 }
 
 .login-box {
-    margin-top: -450px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 37%;
-    margin-right: 37%;
-    padding: 130px;
-    background: linear-gradient(#0747a1,#90cbf9);
-    opacity: 0;
+    padding: 103px;
+    background-color: white;
+    border: 1px solid #000
 }
 
 .register-box {
-    margin-top: -450px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 37%;
-    margin-right: 37%;
-    padding: 130px;
-    background: linear-gradient(#0747a1,#90cbf9);
-    opacity: 0;
+    padding: 100px;
+    border: 1px solid #000
 }
 
 @keyframes tela {
@@ -98,28 +35,3 @@ body {
 
     }
 }
-
-.squares li {
-    width: 40px;
-    height: 40px;
-    background-color: rgb(255, 255, 255, 0.15);
-    display: block;
-    position: absolute;
-    bottom: -40px;
-    animation: up 2s infinite;
-    animation-direction: alternate;
-}
-
-@keyframes up {
-    form {
-        opacity: 0;
-        transform: translateY(0);
-    }
-    50% {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-        transform: translateY(-700px) rotate(960deg);
-    }
-} */

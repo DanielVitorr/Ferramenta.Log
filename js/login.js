@@ -31,14 +31,16 @@ function myFunction() {
             view.type = "password";
         }
     }
-    function myFunction2() {
-    const view = document.getElementById("pass-register");
-    if (view.type === "password") {
-        view.type = "text";
-        } else {
-            view.type = "password";
-        }
-    }
+
+    // function myFunction2() {
+    // const view = document.getElementById("pass-register");
+    // if (view.type === "password") {
+    //     view.type = "text";
+    //     } else {
+    //         view.type = "password";
+    //     }
+    // }
+    
     function myFunction3() {
     const view = document.getElementById("pass-register2");
     if (view.type === "password") {
