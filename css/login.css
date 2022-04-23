@@ -13,10 +13,45 @@ body {
     height: 100vh;
 }
 
-.login-box {
-    padding: 103px;
+.container_tela {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* .login-box {
+    position: fixed;
     background-color: #00cccc;
-    border: 1px solid #000
+    border: 1px solid #000;
+    z-index: 1;
+    width: 0;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    height: 100%;
+    transition: 0.3s;
+    top: 186px;
+    padding-top: 60px;
+} */
+
+.login-box {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 250px;
+    top: 27%;
+    right: 0;
+    background-color: #00cccc;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.closebnt {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
 }
 
 .register-box {
@@ -24,7 +59,7 @@ body {
     border: 1px solid #000
 }
 
-@keyframes tela {
+/* @keyframes tela {
     from{
         opacity: 0;
         transform: scale(0.9);
@@ -34,31 +69,67 @@ body {
         transform: scale(1);
 
     }
-}
+} */
 
-.etiquetaLogin {
+/* .btnLogin {
+    font-size: 12px;
+    border: solid 1px #000;
+    top: 150px;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
- 
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+} */
+
+.btnLogin {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    padding: 5px 90px;
+    right: -10px;
+    font-size: 20px;
+    color: #000;
+    overflow-x: hidden;
+    transition: 0.5s;
 }
 
-.etiquetaCadastro {
+
+.etiquetaCadastro button {
+    font-size: 12px;
+    border: solid 1px #000;
+    top: 200px;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
-
+    display: flex;
 }
 
-.mySidenav h2 {
+/* .mySidenav button {
     position: absolute;
-    right: 15px;
+    right: -10px;
     transition: 0.3s;
-    padding: 15px;
+    padding: 5px 90px;
     width: 100px;
     text-decoration: none;
     font-size: 20px;
     color: rgb(0, 0, 0);
     border-radius: 5px 0 0 5px;
-}
+} */
 
+/* .mySidenav button {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    padding: 5px 90px;
+    right: -10px;
+    font-size: 20px;
+    color: #000;
+    overflow-x: hidden;
+    transition: 0.5s;
+} */
+
+
+/* .mySidenav .etiquetaLogin:hover .login-box {
+    display: block;
+    right: 0;
+} */

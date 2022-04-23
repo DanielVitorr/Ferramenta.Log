@@ -49,3 +49,13 @@ function myFunction() {
             view.type = "password";
         }
     }
+
+    function opemLogin() {
+        document.getElementById("telaLogin").style.width = "250px";
+        document.getElementById("bntLogin").style.width = "550px";
+    
+      }
+    
+    function closeLogin() {
+        document.getElementById("telaLogin").style.width = "0";
+    }

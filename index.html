@@ -16,16 +16,36 @@
         <p>Sua ferramenta de gestão de atividades</p>
         <div class="mySidenav">
             <div class="etiquetaLogin">
-                <h2>Login</h2>
+                <button id="btnLogin" class="btnLogin" onclick="opemLogin()">Login</button>
+                <!-- <div id="telaLogin" class="login-box">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeLogin()">x</a>
+                    <img src="" alt="" id="img" height="70">
+                    <div class="user-box">
+                        <input type="text" name="usuario" id="myInput" required>
+                        <label for="usuario"><i class="fa-solid fa-user"></i> Usuário</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="password" id="myPass" required>
+                        <label for="password"><i class="fa-solid fa-key"></i> Senha</label>
+                    </div>
+                    <div class="view-box">
+                        <input type="checkbox" onclick="myFunction()">
+                        <label>Visualizar Senha</label>
+                    </div>
+                    <a href="./pag_principal/home.html">
+                        <strong>ENTRAR</strong>
+                    </a>
+                </div> -->
             </div>
             <div class="etiquetaCadastro">
-                <h2>Cadastra-se</h2>
+                <button>Registrar</button>
             </div>
         </div>
     </div>
     
     <div class="container">
-        <div class="login-box">
+        <div id="telaLogin" class="login-box">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeLogin()">x</a>
             <img src="" alt="" id="img" height="70">
             <div class="user-box">
                 <input type="text" name="usuario" id="myInput" required>
