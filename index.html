@@ -12,12 +12,25 @@
 </head>
 <body>
     <div class="container_tela">
-        <img src="./img/GRIFO_LOGO.png" height="150">
-        <h1>GRIFO</h1>
-        <p>Sua ferramenta de gestão de atividades</p>
+        <div class="container_logo">
+            <div class="logo">
+                <img src="./img/GRIFO_LOGO.png" height="150">
+            </div>
+            
+            <h1>GRIFO</h1>
+            <p>Sua ferramenta de gestão de atividades</p>
+        </div>
+        
         <div class="mySidenav">
             <div class="etiquetaLogin">
-                <button id="btnLogin" class="btnLogin" onclick="opemLogin()">Login</button>
+                <button id="btnLogin" class="btnLogin">
+                    <span>Login</span>
+                </button>
+                <div class="register_container">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
                 <!-- <div id="telaLogin" class="login-box">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeLogin()">x</a>
                     <img src="" alt="" id="img" height="70">
@@ -39,7 +52,14 @@
                 </div> -->
             </div>
             <div class="etiquetaCadastro">
-                <button>Registrar</button>
+                <button class="btnRegistar">
+                    <span>Registar</span>
+                </button>
+                <div class="register_container">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
             </div>
         </div>
     </div>
@@ -91,5 +111,22 @@
     </div>
 
     <script src="./js/login.js"></script>
+
+    <script>
+        var dropdown = document.getElementsByClassName("btnLogin");
+        var i;
+    
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+            });
+        }
+    </script>
 </body>
 </html>
