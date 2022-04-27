@@ -12,34 +12,40 @@
 </head>
 <body>
     <div class="container_tela">
-        <img src="./img/GRIFO_LOGO.png" height="150">
-        <h1>GRIFO</h1>
-        <p>Sua ferramenta de gestão de atividades</p>
+
+            <div class="div1">
+                <div class="div2"><p>1</p></div>
+            </div>
+        
+        <div class="container_logo">
+            <div class="logo">
+                <img src="./img/GRIFO_LOGO.png" height="150">
+            </div>
+            
+            <h1>GRIFO</h1>
+            <p>Sua ferramenta de gestão de atividades</p>
+        </div>
+        
         <div class="mySidenav">
             <div class="etiquetaLogin">
-                <button id="btnLogin" class="btnLogin" onclick="opemLogin()">Login</button>
-                <!-- <div id="telaLogin" class="login-box">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeLogin()">x</a>
-                    <img src="" alt="" id="img" height="70">
-                    <div class="user-box">
-                        <input type="text" name="usuario" id="myInput" required>
-                        <label for="usuario"><i class="fa-solid fa-user"></i> Usuário</label>
-                    </div>
-                    <div class="user-box">
-                        <input type="password" name="password" id="myPass" required>
-                        <label for="password"><i class="fa-solid fa-key"></i> Senha</label>
-                    </div>
-                    <div class="view-box">
-                        <input type="checkbox" onclick="myFunction()">
-                        <label>Visualizar Senha</label>
-                    </div>
-                    <a href="./pag_principal/home.html">
-                        <strong>ENTRAR</strong>
-                    </a>
-                </div> -->
+                <button class="btnLogin">
+                    <span>Login</span>
+                </button>
+                <div class="login_container">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
             </div>
             <div class="etiquetaCadastro">
-                <button>Registrar</button>
+                <button class="btnRegistar">
+                    <span>Registar</span>
+                </button>
+                <div class="register_container">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
             </div>
         </div>
     </div>
@@ -91,5 +97,37 @@
     </div>
 
     <script src="./js/login.js"></script>
+
+    <script>
+        var dropdown = document.getElementsByClassName("btnLogin");
+        var i;
+    
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+            });
+        }
+
+        var dropdown = document.getElementsByClassName("btnRegistar");
+        var i;
+    
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+            });
+        }
+    </script>
 </body>
 </html>

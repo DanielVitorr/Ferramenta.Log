@@ -59,3 +59,5 @@ function myFunction() {
     function closeLogin() {
         document.getElementById("telaLogin").style.width = "0";
     }
+
+//Teste Registro
