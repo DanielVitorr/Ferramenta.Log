@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="container_tela">
-        
+
         <div class="container_logo">
             <div class="logo">
                 <img src="./img/GRIFO_LOGO.png" height="150">
@@ -24,14 +24,10 @@
         
         <div class="mySidenav">
             <div class="etiquetaLogin">
-                <button class="btnLogin" onclick="ativeLogin();">
-                    <span>Login</span>
-                </button>
+                <button class="btnLogin" onclick="ativeLogin();">Login</button>
             </div>
             <div class="etiquetaRegistrar">
-                <button class="btnRegistrar" onclick="ativeRegistrar();">
-                    <span>Registar</span>
-                </button>
+                <button class="btnRegistrar" onclick="ativeRegistrar();">Registar</button>
             </div>
         </div>
     </div>
@@ -40,47 +36,39 @@
         <div class="login-box">
             <div class="user-box">
                 <input type="text" name="usuario" id="myInput" required placeholder="Usuário">
-                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-user" id="user"></i>
             </div>
             <div class="user-box">
                 <input type="password" name="password" id="myPass" required placeholder="Senha">
-                <i class="fa-solid fa-key"></i>
+                <i class="fa-solid fa-key" id="senha"></i>
             </div>
-            <div class="view-box">
-                <input type="checkbox" onclick="myFunction()">
-                <label>Visualizar Senha</label>
-            </div>
-            <a href="./pag_principal/home.html">
+            <a href="./pag_principal/home.html" class="btn_entrar">
                 <strong>ENTRAR</strong>
             </a>
         </div>
-        <a class="closebtn" onclick="ativeLogin();"><i class="fa-solid fa-circle-xmark"></i></a>
+        <a class="closebtn_login" onclick="ativeLogin();"><i class="fa-solid fa-circle-xmark"></i></a>
     </div>
     <div class="registrar_container" id="registrar_container">
-        <div class="register-box">
+        <div class="registrar-box">
             <form action="" method="post">
                 <div class="reg-user-box">
                     <input type="text" name="usuario" id="user-register" required placeholder="Usuário">
-                    <i class="fa-solid fa-user"></i>
+                    <span><i class="fa-solid fa-user" id="user"></i></span>
                 </div>
                 <div class="reg-password-box">
                     <input type="email" name="email" id="email-register" required placeholder="Email">
-                    <i class="fa-solid fa-envelope"></i>
+                    <span><i class="fa-solid fa-envelope" id="email"></i></span>
                 </div>
                 <div class="reg-password-box">
                     <input type="password" name="conf-password" id="pass-register2" required placeholder="Senha">
-                    <i class="fa-solid fa-key"></i>
+                    <span><i class="fa-solid fa-key" id="senha"></i></span>
                 </div>
-                <div class="">
-                    <input type="checkbox" onclick="myFunction3()">
-                    <label>Visualizar Senha</label>
-                </div>
-                <div>
-                    <button type="submit">Cadastra-se</button>
+                <div class="btn_registrar">
+                    <button type="submit">Registrar</button>
                 </div>
             </form>
         </div>
-        <a class="closebtn" onclick="ativeRegistrar();"><i class="fa-solid fa-circle-xmark"></i></a>
+        <a class="closebtn_registrar" onclick="ativeRegistrar();"><i class="fa-solid fa-circle-xmark"></i></a>
     </div>
 
     <script src="./js/login.js"></script>
