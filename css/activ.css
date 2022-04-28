@@ -63,7 +63,7 @@ body {
     position: relative;
     background-color: #fff;
     box-sizing: rgba(15,15,15,0.1) 0px 0px 0px 1px;
-    rgba(15,15,15,0.1) 0px 2px 4px;
+    /* rgba(15,15,15,0.1) 0px 2px 4px; */
     border-radius:4px;
     padding: 0.5rem 1rem;
     font-size: 1.5rem;

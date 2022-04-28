@@ -30,17 +30,17 @@ function dragOver(e){
 }
 
 function dragEnter(){
-    this.style.border= 1px dashed #ccc;
+    // this.style.border= px #ccc;
     console.log("dragEnter");
 }
 
 function dragLeave(){
-    this.style.border= none;
+    // this.style.border= none;
     console.log("dragLeave");
 }
 
 function dragDrop(){
-    this.style.border= none;
+    // this.style.border= none;
     this.appendChild(draggableTodo);
-    console.log("dropped");
+    console.log("drop");
 }
