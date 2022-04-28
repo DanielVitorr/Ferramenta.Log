@@ -1,251 +1,363 @@
-html {
-    height: 100%;
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
 
 body {
     overflow: hidden;
-    background-image: url(../img/Tela_Fundo.png);
+    background-image: url(../img/Tela_Fundo2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/Seagram\ tfb.ttf)
+}
+
+.container_tela {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .container_logo {
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 .logo {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .container_tela h1 {
     display: flex;
     justify-content: center;
+    color: #001c31;
+    font-family: myFirstFont;
+    font-size: 40px;
 }
 
 .container_tela p {
     display: flex;
     justify-content: center;
+    color: #001c31;
+    font-family: myFirstFont;
+    font-size: 25px;
 }
 
-.container {
+/* Tela login */
+#tela_container {
+    display: flex;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background: rgba(0, 28, 49, 0.9);
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-radius: 10px;
+    width: 400px;
+    min-height: 300px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+    visibility: hidden;
+}
+#tela_container.active {
+    visibility: visible;
+    top: 50%;
+}
+/* Tela login */
+
+/* Tela registrar */
+#registrar_container {
+    display: flex;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background: rgba(0, 28, 49, 0.9);
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-radius: 10px;
+    width: 400px;
+    min-height: 300px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+    visibility: hidden;
+}
+#registrar_container.active {
+    visibility: visible;
+    top: 50%;
+}
+/* Tela registrar */
+
+.mySidenav {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin-top: 2%;
 }
 
-.container_tela {
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.etiquetaLogin {
-    height: 50%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-}
-
-.etiquetaCadastro {
-    height: 50%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    bottom: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-}
-
-/* .mySidenav .btnRegistar {
-    display: block;
-    right: 0;
-}
-
-.mySidenav .btnLogin {
-    display: block;
-} */
-     
-.etiquetaLogin a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: right;
-    cursor: pointer;
-    outline: none;
-}
-
-.etiquetaCadastro a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: right;
-    cursor: pointer;
-    outline: none;
-}
-
+/* Botão menu login */
 .etiquetaLogin .btnLogin {
-    display: block;
-    padding: 6px 8px 6px 15px;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    position: relative;
+    padding: 20px 70px;
+    background: #001c31;
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 100px;
+    right: 20px;
 }
+/* Botão menu login */
 
-.etiquetaCadastro .btnRegistar {
-    display: block;
-    padding: 6px 8px 6px 15px;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+/* Botão menu registrar */
+.etiquetaRegistrar .btnRegistrar {
+    position: relative;
+    padding: 20px 50px;
+    background: #001c31;
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-radius: 100px;
+    left: 20px;
 }
+/* Botão menu registrar */
 
-.login_container {
-    display: none;
-    background-color: #262626;
-    padding-left: 8px;
-}
-
-.register_container {
-    display: none;
-    background-color: #262626;
-    padding-left: 8px;
+.registrar-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
 }
 
 .login-box {
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    height: 250px;
-    top: 27%;
-    right: 0;
-    background-color: #00cccc;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.register-box {
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    height: 250px;
-    top: 27%;
-    right: -210px;
-    background-color: #00cccc;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.closebnt {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-}
-
-.register-box {
-    padding: 100px;
-    border: 1px solid #000
-}
-
-/* .btnLogin {
+    position: relative;
+    width: 100%;
     display: flex;
-    top: 20%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    padding: 5px 90px;
-    right: -10px;
-    font-size: 20px;
-    color: #000;
-    overflow-x: hidden;
-    transition: 0.5s;
-} */
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+}
 
-/* .btnRegistar {
-    display: flex;
-    top: 30%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    padding: 5px 90px;
-    right: -10px;
-    font-size: 20px;
-    color: #000;
-    overflow-x: hidden;
-    transition: 0.5s;
-} */
 
-/* .mySidenav .btnLogin:hover {
-    right: 10px;
-    margin-left: none;
-    padding: 50px 90px;
-} */
+/* Input registrar */
+.registrar_container .registrar-box input {
+    margin-bottom: 20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.registrar_container .registrar-box input::placeholder {
+    color: #fff;
+}
+/* Input registrar */
 
-/* .mySidenav .register_container {
-    display: none;
-    top: 40%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    padding: 5px 90px;
-    right: -10px;
-    font-size: 20px;
-    color: #000;
-    overflow-x: hidden;
-    transition: 0.5s;
-} */
 
-/* .mySidenav .login_container {
-    display: none;
-    top: 25%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    padding: 5px 90px;
-    right: -10px;
-    font-size: 20px;
-    color: #000;
-    overflow-x: hidden;
-    transition: 0.5s;
-} */
-
-.div1 {
+/* Caixa de fechar registrar */
+.registrar_container .closebtn_registrar {
     position: absolute;
-    background-color: #ff0000;
-    top: 20%;
-    left: 30%;
-    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
-    padding: 20px 90px;
-    
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    color: #00a887;
+    font-size: 35px
 }
+/* Caixa de fechar registrar */
 
-.div1 .div2 p {
-    display: none;
+/* Caixa de fechar login */
+.tela_container .closebtn_login {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    color: #00a887;
+    font-size: 35px
 }
+/* Caixa de fechar login */
 
-.div1:hover, .div2 p:hover {
-    padding: 90px 90px 90px 90px;
-    display: block;
+/* Caixa de icones - registrar */
+.registrar_container .registrar-box #user {
+    position: absolute;
+    left: 1%;
+    font-size: 25px;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    border-radius: 35px;
+    padding: 6.5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.2);
 }
+.registrar_container .registrar-box #email {
+    position: absolute;
+    left: 1%;
+    font-size: 25px;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    border-radius: 35px;
+    padding: 6.5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+.registrar_container .registrar-box #senha {
+    position: absolute;
+    left: 1%;
+    font-size: 25px;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    border-radius: 35px;
+    padding: 6.5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+/* Caixa de icones - registrar */
+
+
+/* Botão de registrar */
+.registrar_container .registrar-box .btn_registrar {
+    top: 10%;
+    position: relative;
+}
+.registrar_container .registrar-box .btn_registrar button {
+    position: relative;
+    width: 100%;
+    left: -30px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+.registrar_container .registrar-box .btn_registrar button:hover {
+    background: rgb(9, 177, 142, 0.5);
+}
+/* Botão de registrar */
+
+/* Caixa de icones - Login */
+.tela_container .login-box #user {
+    position: absolute;
+    left: 1%;
+    font-size: 25px;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    border-radius: 35px;
+    padding: 6.5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+.tela_container .login-box #senha {
+    position: absolute;
+    left: 1%;
+    font-size: 25px;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    border-radius: 35px;
+    padding: 6.5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+/* Caixa de icones - Login */
+
+
+/* Input login */
+.tela_container .login-box input {
+    margin-bottom: 20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.tela_container .login-box input::placeholder {
+    color: #fff;
+}
+/* Input login */
+
+/* Botão de login */
+.tela_container .login-box .btn_entrar {
+    top: 10%;
+    position: relative;
+}
+.tela_container .login-box a {
+    position: relative;
+    width: 100%;
+    left: 0px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+.tela_container .login-box a:hover {
+    background: rgb(9, 177, 142, 0.5);
+}
+/* Botão de login */

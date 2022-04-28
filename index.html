@@ -13,10 +13,6 @@
 <body>
     <div class="container_tela">
 
-            <div class="div1">
-                <div class="div2"><p>1</p></div>
-            </div>
-        
         <div class="container_logo">
             <div class="logo">
                 <img src="./img/GRIFO_LOGO.png" height="150">
@@ -28,105 +24,62 @@
         
         <div class="mySidenav">
             <div class="etiquetaLogin">
-                <button class="btnLogin">
-                    <span>Login</span>
-                </button>
-                <div class="login_container">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
+                <button class="btnLogin" onclick="ativeLogin();">Login</button>
             </div>
-            <div class="etiquetaCadastro">
-                <button class="btnRegistar">
-                    <span>Registar</span>
-                </button>
-                <div class="register_container">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
+            <div class="etiquetaRegistrar">
+                <button class="btnRegistrar" onclick="ativeRegistrar();">Registar</button>
             </div>
         </div>
     </div>
     
-    <div class="container">
-        <div id="telaLogin" class="login-box">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeLogin()">x</a>
-            <img src="" alt="" id="img" height="70">
+    <div class="tela_container" id="tela_container">
+        <div class="login-box">
             <div class="user-box">
-                <input type="text" name="usuario" id="myInput" required>
-                <label for="usuario"><i class="fa-solid fa-user"></i> Usuário</label>
+                <input type="text" name="usuario" id="myInput" required placeholder="Usuário">
+                <i class="fa-solid fa-user" id="user"></i>
             </div>
             <div class="user-box">
-                <input type="password" name="password" id="myPass" required>
-                <label for="password"><i class="fa-solid fa-key"></i> Senha</label>
+                <input type="password" name="password" id="myPass" required placeholder="Senha">
+                <i class="fa-solid fa-key" id="senha"></i>
             </div>
-            <div class="view-box">
-                <input type="checkbox" onclick="myFunction()">
-                <label>Visualizar Senha</label>
-            </div>
-            <a href="./pag_principal/home.html">
+            <a href="./pag_principal/home.html" class="btn_entrar">
                 <strong>ENTRAR</strong>
             </a>
         </div>
-
-        <div class="register-box">
+        <a class="closebtn_login" onclick="ativeLogin();"><i class="fa-solid fa-circle-xmark"></i></a>
+    </div>
+    <div class="registrar_container" id="registrar_container">
+        <div class="registrar-box">
             <form action="" method="post">
                 <div class="reg-user-box">
-                    <input type="text" name="usuario" id="user-register" required>
-                    <label for="usuario"><i class="fa-solid fa-user"></i> Usuário</label>
+                    <input type="text" name="usuario" id="user-register" required placeholder="Usuário">
+                    <span><i class="fa-solid fa-user" id="user"></i></span>
                 </div>
                 <div class="reg-password-box">
-                    <input type="email" name="email" id="email-register" required>
-                    <label for="email"><i class="fa-solid fa-envelope"></i> Email</label>
+                    <input type="email" name="email" id="email-register" required placeholder="Email">
+                    <span><i class="fa-solid fa-envelope" id="email"></i></span>
                 </div>
                 <div class="reg-password-box">
-                    <input type="password" name="conf-password" id="pass-register2" required>
-                    <label for="conf-password"><i class="fa-solid fa-key"></i> Senha</label>
+                    <input type="password" name="conf-password" id="pass-register2" required placeholder="Senha">
+                    <span><i class="fa-solid fa-key" id="senha"></i></span>
                 </div>
-                <div class="">
-                    <input type="checkbox" onclick="myFunction3()">
-                    <label>Visualizar Senha</label>
-                </div>
-                <div>
-                    <button type="submit">Cadastra-se</button>
+                <div class="btn_registrar">
+                    <button type="submit">Registrar</button>
                 </div>
             </form>
         </div>
+        <a class="closebtn_registrar" onclick="ativeRegistrar();"><i class="fa-solid fa-circle-xmark"></i></a>
     </div>
 
     <script src="./js/login.js"></script>
-
     <script>
-        var dropdown = document.getElementsByClassName("btnLogin");
-        var i;
-    
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
-            });
+        function ativeLogin() {
+            const telaLogin = document.getElementById('tela_container');
+            telaLogin.classList.toggle('active')
         }
-
-        var dropdown = document.getElementsByClassName("btnRegistar");
-        var i;
-    
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
-            });
+        function ativeRegistrar() {
+            const telaLogin = document.getElementById('registrar_container');
+            telaLogin.classList.toggle('active')
         }
     </script>
 </body>
