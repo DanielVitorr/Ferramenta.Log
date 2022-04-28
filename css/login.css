@@ -1,6 +1,8 @@
-html {
-    height: 100%;
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
 
 body {
     overflow: hidden;
@@ -11,16 +13,17 @@ body {
     background-attachment: fixed;
 }
 
-/* .container_logo {
+.container_logo {
     margin-top: 10%;
 }
 
 .logo {
     display: flex;
     justify-content: center;
-} */
+    align-items: center;
+}
 
-/* .container_tela h1 {
+.container_tela h1 {
     display: flex;
     justify-content: center;
 }
@@ -30,143 +33,125 @@ body {
     justify-content: center;
 }
 
-.container {
+#tela_container {
+    display: flex;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background: rgba(225, 225, 225, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 400px;
+    min-height: 300px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+#tela_container.active {
+    visibility: visible;
+    top: 50%;
+}
+
+#registrar_container {
+    display: flex;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+    background: rgba(225, 225, 225, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 400px;
+    min-height: 300px;
+    padding: 80px 50px 50px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+#registrar_container.active {
+    visibility: visible;
+    top: 50%;
+}
+
+.mySidenav {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container_tela {
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.etiquetaLogin {
-    height: 50%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-}
-
-.etiquetaCadastro {
-    height: 50%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    bottom: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-}
-     
-.etiquetaLogin a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: right;
-    cursor: pointer;
-    outline: none;
-}
-
-.etiquetaCadastro a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    color: #818181;
-    display: block;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: right;
-    cursor: pointer;
-    outline: none;
+    margin-top: 5%;
 }
 
 .etiquetaLogin .btnLogin {
-    display: block;
-    padding: 6px 8px 6px 15px;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    position: relative;
+    padding: 20px 70px;
+    background: #fff;
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    color: #03a9f4;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border: none;
+    border: 1px solid #000;
+    border-radius: 100px;
+    right: 30px;
 }
 
-.etiquetaCadastro .btnRegistar {
-    display: block;
-    padding: 6px 8px 6px 15px;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+.etiquetaRegistrar .btnRegistrar {
+    position: relative;
+    padding: 20px 50px;
+    background: #fff;
+    font-size: 18px;
+    display: inline-block;
+    text-decoration: none;
+    color: #03a9f4;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border: 1px solid #000;
+    border-radius: 100px;
+    left: 30px;
 }
 
-.login_container {
-    display: none;
-    background-color: #262626;
-    padding-left: 8px;
-}
-
-.register_container {
-    display: none;
-    background-color: #262626;
-    padding-left: 8px;
+.register-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .login-box {
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    height: 250px;
-    top: 27%;
-    right: 0;
-    background-color: #00cccc;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.register-box {
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    height: 250px;
-    top: 27%;
-    right: -210px;
-    background-color: #00cccc;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+.registrar_container .register-box input {
+    margin-top: 20px;
 }
 
-.closebnt {
+.tela_container .login-box input {
+    margin-top: 20px;
+}
+
+.closebtn {
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-}
-
-.register-box {
-    padding: 100px;
-    border: 1px solid #000
-} */
-
-
-
-.div1 {
-    position: absolute;
-    background-color: #ff0000;
-    top: 20%;
-    left: 30%;
-    clip-path: polygon(20% 0%, 90% 0%, 90% 90%, 20% 90%, 0% 40%);
-    padding: 20px 90px;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    color: green;
 }
