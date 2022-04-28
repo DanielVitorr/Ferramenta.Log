@@ -18,8 +18,15 @@ body {
     src: url(../font/Seagram\ tfb.ttf)
 }
 
+.container_tela {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .container_logo {
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 .logo {
