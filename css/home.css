@@ -13,64 +13,55 @@ body{
     overflow: hidden;
 }
 
+/* Barra de navegação */
 .sidebar{
     position: fixed;
-    top: 0;
-    left: 0;
     height: 100%;
-    width: 240px;
+    width: 80px;
     background: #01425e;
     padding: 6px 14px;
     transition: all 0.5s ease;
     display: flex;
     flex-direction: column;
 }
+.sidebar.active {
+    width: 240px;
+}
+/* Barra de navegação */
 
+/* logo */
 .logo_content {
     display: flex;
     position: relative;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
 }
-
-.logo_content .logo_name{
-    font-size: 17px;
-    font-weight: 400;
-    color: #fff;
+.sidebar.active .logo_content {
+    padding: auto;
 }
+/* logo */
 
-
+/* Botão da barra de navegação */
 .sidebar #btn{
-    position: absolute;
+    position: relative;
     color: #fff;
-    left: 90%;
-    top: 6px;
     font-size: 20px;
-    height: 50px;
-    width: 50px;
     text-align: center;
     line-height: 50px;
-    transform: translateX(-50%);
-
+    justify-content: center;
+    align-items: center;
 }
+/* Botão da barra de navegação */
 
-
-
-.sidebar ul{
-    margin-top: 20px;
-}
-
+/* Botões de navegação */
 .sidebar ul li{
     position: relative;
     height: 50px;
     width: 100%;
-    margin: 5px;
+    margin-bottom: 5px;
     list-style: none;
     line-height: 50px;
-
 }
-
 .sidebar ul li .tooltip{
     position: absolute;
     left: 112px;
@@ -86,16 +77,12 @@ body{
     transition: 0s;
     opacity: 0;
     pointer-events: none;
-
 }
-
 .sidebar ul li:hover .tooltip{
     transition: all 0.5s ease;
     opacity: 1;
-
     top: 50%;
-} 
-
+}
 .sidebar ul li input{
     position: absolute;
     height: 100%;
@@ -109,19 +96,13 @@ body{
     padding-left: 50px;
     font-size: 18px;
     color: #fff;
-
 }
-
 .sidebar ul li .fa-magnifying-glass{
     position:absolute;
     z-index: 99;
     color: #fff;
     font-size: 22px;
-    
-
 }
-
-
 .sidebar ul li a{
     color: #fff;
     display: flex;
@@ -129,84 +110,72 @@ body{
     text-decoration: none;
     transition: all 0.4s ease;
     border-radius: 12px;
-
 }
-
 .sidebar ul li i{
     height: 50px;
     min-width: 50px;
     border-radius: 12px;
     line-height: 50px;
     text-align: center;
-}  
-
+}
 .sidebar ul li a:hover{
     color: #01425e;
     background: #fff;
 }
+/* Botões de navegação */
 
-.sidebar .profile_content{
+/* usuário / sair */
+.profile_content {
     position: absolute;
-    color: #000;
-    bottom: 0;
-    left: 0; 
-
-
+    width: 88%;
+    bottom: 10px;
 }
-.sidebar .profile_content .profile{
+.sidebar .profile_content .profile {
     position: relative;
     padding: 10px 6px;
     height: 50px;
     background: #002839;
-}
-
-.profile_content .profile .profile_details{
+    width: 100%;
     display: flex;
-    align-items:center;
+    align-items: center;
+    border-radius: 15px;
 }
-
-.profile .profile_details img{
-    height: 20px;
-    width: 20px;
-    object-fit: cover;
-    border-radius: 12px;
-
-}
-
-.profile .profile_details .name_job{
-    margin-left:10px;
-}
-
-.profile .profile_details .name{
-    font-size:15px;
-    font-weight: 400;
-}
-
-.profile .profile_details .job{
-    font-size:12px;
-}
-
-.profile #log_out{
-    position: absolute;
-    left: 88%;
-    bottom: 5px;
-    transform: translateX(-50%);
-    min-height: 50px;
-    line-height: 50px;
-    font-size: 50px;
-    border-radius:12px;
-}
-
-.home_content{
-    position: absolute;
-    height: 100%;
-    width: calc(100%-240px);
-    left: 240px;
-}
-
-.home_content .text{
+.sidebar .profile_content .profile .sair a {
+    position: relative;
+    width: 100%;
+    margin-left: 70px;
     font-size: 25px;
-    font-weight: 500;
-    color: #000;
-    margin-top: 12px;
+    color: #fff;
 }
+.sidebar .profile_content .profile .sair .tooltip {
+    position: absolute;
+    left: 110px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 60px;
+    background: rgb(225 225 225 / 50%);
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    transition: 0.5s;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 20px;
+}
+.sidebar .profile_content .profile .sair:hover .tooltip {
+    transition: all 0.5s ease;
+    opacity: 1;
+    color: #fff;
+    font-size: 20px;
+}
+.sidebar .profile_content .profile i {
+    color: #fff;
+    font-size: 30px;
+}
+.sidebar .profile_content .profile p {
+    color: #fff;
+    margin-left: 10px;
+}
+/* usuário / sair */
