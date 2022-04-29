@@ -8,7 +8,6 @@
 }
 
 body{
-    position: relative;
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
@@ -23,14 +22,22 @@ body{
     background: #01425e;
     padding: 6px 14px;
     transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
 }
 
+.logo_content {
+    display: flex;
+    position: relative;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+}
 
 .logo_content .logo_name{
     font-size: 17px;
     font-weight: 400;
     color: #fff;
-
 }
 
 
@@ -134,7 +141,7 @@ body{
 }  
 
 .sidebar ul li a:hover{
-    color: 11101d;
+    color: #01425e;
     background: #fff;
 }
 
@@ -202,4 +209,4 @@ body{
     font-weight: 500;
     color: #000;
     margin-top: 12px;
-
+}
