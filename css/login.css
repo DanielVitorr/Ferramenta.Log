@@ -36,25 +36,14 @@ body {
     position: fixed;
 }
 
-/* .container_tela .container_logo {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-} */
-
+.container_tela .container_logo .logo img {
+    margin-bottom: -20px;
+}
 
 .container_tela .container_logo .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.container_logo h1 {
-    display: flex;
-    justify-content: center;
-    color: #001c31;
-    font-family: myFirstFont;
-    font-size: 40px;
 }
 
 .container_logo p {
@@ -63,6 +52,7 @@ body {
     color: #001c31;
     font-family: myFirstFont;
     font-size: 25px;
+    margin-bottom: 30px;
 }
 
 /* Tela login */
