@@ -2,7 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- }
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
 
 body {
     overflow: hidden;
@@ -17,38 +22,41 @@ body {
     font-family: myFirstFont;
     src: url(../font/Seagram\ tfb.ttf)
 }
+@font-face {
+    font-family: myFirstFont2;
+    src: url(../font/edosz.ttf)
+}
 
 .container_tela {
-    position: relative;
+    display: flex;
+    position: fixed;
     justify-content: center;
     align-items: center;
-
+    height: 100%;
+    width: 100%;
 }
 
-.container_logo {
-    margin-top: 8%;
+.container_tela .container_logo {
+    position: fixed;
 }
 
-.logo {
+.container_tela .container_logo .logo img {
+    margin-bottom: -20px;
+}
+
+.container_tela .container_logo .logo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container_tela h1 {
+.container_logo p {
     display: flex;
     justify-content: center;
     color: #001c31;
-    font-family: myFirstFont;
-    font-size: 40px;
-}
-
-.container_tela p {
-    display: flex;
-    justify-content: center;
-    color: #001c31;
-    font-family: myFirstFont;
+    font-family: myFirstFont2;
     font-size: 25px;
+    margin-bottom: 30px;
 }
 
 /* Tela login */
@@ -124,6 +132,7 @@ body {
     transition: 0.5s;
     border-radius: 100px;
     right: 20px;
+    font-family: myFirstFont2;
 }
 /* Botão menu login */
 
@@ -146,6 +155,7 @@ body {
     transition: 0.5s;
     border-radius: 100px;
     left: 20px;
+    font-family: myFirstFont2;
 }
 /* Botão menu registrar */
 
@@ -180,6 +190,7 @@ body {
     border-right: 2px solid rgb(9, 177, 142, 0.5);
     border-bottom: 2px solid rgb(9, 177, 142, 0.5);
     font-size: 16px;
+    font-family: myFirstFont2;
     letter-spacing: 1px;
     color: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -272,6 +283,7 @@ body {
     border-right: 2px solid rgb(9, 177, 142, 0.5);
     border-bottom: 2px solid rgb(9, 177, 142, 0.5);
     font-size: 16px;
+    font-family: myFirstFont2;
     letter-spacing: 1px;
     color: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -324,6 +336,7 @@ body {
     border-right: 2px solid rgb(9, 177, 142, 0.5);
     border-bottom: 2px solid rgb(9, 177, 142, 0.5);
     font-size: 16px;
+    font-family: myFirstFont2;
     letter-spacing: 1px;
     color: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -350,6 +363,7 @@ body {
     border-right: 2px solid rgb(9, 177, 142, 0.5);
     border-bottom: 2px solid rgb(9, 177, 142, 0.5);
     font-size: 16px;
+    font-family: myFirstFont2;
     letter-spacing: 1px;
     color: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
