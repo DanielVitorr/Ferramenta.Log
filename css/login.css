@@ -2,37 +2,64 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
- }
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
 
 body {
     overflow: hidden;
-    background-image: url(../img/Tela_Fundo.png);
+    background-image: url(../img/Tela_Fundo2.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 
-.container_logo {
-    margin-top: 10%;
+@font-face {
+    font-family: myFirstFont;
+    src: url(../font/Seagram\ tfb.ttf)
+}
+@font-face {
+    font-family: myFirstFont2;
+    src: url(../font/edosz.ttf)
 }
 
-.logo {
+.container_tela {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container_tela .container_logo {
+    position: fixed;
+}
+
+.container_tela .container_logo .logo img {
+    margin-bottom: 20px;
+}
+
+.container_tela .container_logo .logo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container_tela h1 {
+.container_logo p {
     display: flex;
     justify-content: center;
+    color: #001c31;
+    font-family: myFirstFont2;
+    font-size: 25px;
+    margin-bottom: 30px;
 }
 
-.container_tela p {
-    display: flex;
-    justify-content: center;
-}
-
+/* Tela login */
 #tela_container {
     display: flex;
     position: fixed;
@@ -40,8 +67,8 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 1000;
-    background: rgba(225, 225, 225, 0.5);
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    background: rgba(0, 28, 49, 0.9);
+    border: 2px solid rgb(9, 177, 142, 0.5);
     border-radius: 10px;
     width: 400px;
     min-height: 300px;
@@ -50,12 +77,13 @@ body {
     transition: 0.5s;
     visibility: hidden;
 }
-
 #tela_container.active {
     visibility: visible;
     top: 50%;
 }
+/* Tela login */
 
+/* Tela registrar */
 #registrar_container {
     display: flex;
     position: fixed;
@@ -63,8 +91,8 @@ body {
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 1000;
-    background: rgba(225, 225, 225, 0.5);
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    background: rgba(0, 28, 49, 0.9);
+    border: 2px solid rgb(9, 177, 142, 0.5);
     border-radius: 10px;
     width: 400px;
     min-height: 300px;
@@ -73,61 +101,70 @@ body {
     transition: 0.5s;
     visibility: hidden;
 }
-
 #registrar_container.active {
     visibility: visible;
     top: 50%;
 }
+/* Tela registrar */
 
 .mySidenav {
     display: flex;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
+/* Botão menu login */
 .etiquetaLogin .btnLogin {
     position: relative;
     padding: 20px 70px;
-    background: #fff;
+    background: #001c31;
     font-size: 18px;
     display: inline-block;
     text-decoration: none;
-    color: #03a9f4;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
     cursor: pointer;
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: 0.5s;
-    border: none;
-    border: 1px solid #000;
     border-radius: 100px;
-    right: 30px;
+    right: 20px;
+    font-family: myFirstFont2;
 }
+/* Botão menu login */
 
+/* Botão menu registrar */
 .etiquetaRegistrar .btnRegistrar {
     position: relative;
     padding: 20px 50px;
-    background: #fff;
+    background: #001c31;
     font-size: 18px;
     display: inline-block;
     text-decoration: none;
-    color: #03a9f4;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
     cursor: pointer;
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: 0.5s;
-    border: 1px solid #000;
     border-radius: 100px;
-    left: 30px;
+    left: 20px;
+    font-family: myFirstFont2;
 }
+/* Botão menu registrar */
 
-.register-box {
+.registrar-box {
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: end;
+    align-items: end;
     flex-direction: column;
 }
 
@@ -135,23 +172,206 @@ body {
     position: relative;
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: end;
+    align-items: end;
     flex-direction: column;
 }
 
-.registrar_container .register-box input {
-    margin-top: 20px;
-}
 
-.tela_container .login-box input {
-    margin-top: 20px;
+/* Input registrar */
+.registrar_container .registrar-box input {
+    margin-bottom: 20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    font-size: 16px;
+    font-family: myFirstFont2;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
+.registrar_container .registrar-box input::placeholder {
+    color: #fff;
+}
+/* Input registrar */
 
-.closebtn {
+
+/* Caixa de fechar registrar */
+.registrar_container .closebtn_registrar {
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 15px;
+    right: 20px;
     cursor: pointer;
-    color: green;
+    color: #00a887;
+    font-size: 35px
 }
+/* Caixa de fechar registrar */
+
+/* Caixa de fechar login */
+.tela_container .closebtn_login {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    color: #00a887;
+    font-size: 35px
+}
+/* Caixa de fechar login */
+
+/* Caixa de icones - registrar */
+.registrar_container .registrar-box #user {
+    position: absolute;
+    left: 1%;
+    font-size: 25px;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    border-radius: 35px;
+    padding: 6.5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+.registrar_container .registrar-box #email {
+    position: absolute;
+    left: 1%;
+    font-size: 25px;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    border-radius: 35px;
+    padding: 6.5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+.registrar_container .registrar-box #senha {
+    position: absolute;
+    left: 1%;
+    font-size: 25px;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    border-radius: 35px;
+    padding: 6.5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+/* Caixa de icones - registrar */
+
+
+/* Botão de registrar */
+.registrar_container .registrar-box .btn_registrar {
+    top: 10%;
+    position: relative;
+}
+.registrar_container .registrar-box .btn_registrar button {
+    position: relative;
+    width: 100%;
+    left: -30px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    font-size: 16px;
+    font-family: myFirstFont2;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+.registrar_container .registrar-box .btn_registrar button:hover {
+    background: rgb(9, 177, 142, 0.5);
+}
+/* Botão de registrar */
+
+/* Caixa de icones - Login */
+.tela_container .login-box #user {
+    position: absolute;
+    left: 1%;
+    font-size: 25px;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    border-radius: 35px;
+    padding: 6.5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+.tela_container .login-box #senha {
+    position: absolute;
+    left: 1%;
+    font-size: 25px;
+    color: #fff;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    border-radius: 35px;
+    padding: 6.5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.2);
+}
+/* Caixa de icones - Login */
+
+
+/* Input login */
+.tela_container .login-box input {
+    margin-bottom: 20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    font-size: 16px;
+    font-family: myFirstFont2;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.tela_container .login-box input::placeholder {
+    color: #fff;
+}
+/* Input login */
+
+/* Botão de login */
+.tela_container .login-box .btn_entrar {
+    top: 10%;
+    position: relative;
+}
+.tela_container .login-box a {
+    position: relative;
+    width: 100%;
+    left: 0px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 2px solid rgb(9, 177, 142, 0.5);
+    border-right: 2px solid rgb(9, 177, 142, 0.5);
+    border-bottom: 2px solid rgb(9, 177, 142, 0.5);
+    font-size: 16px;
+    font-family: myFirstFont2;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+.tela_container .login-box a:hover {
+    background: rgb(9, 177, 142, 0.5);
+}
+/* Botão de login */
