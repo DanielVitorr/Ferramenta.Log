@@ -178,4 +178,13 @@ body{
     color: #fff;
     margin-left: 10px;
 }
+
+.home_content .text{
+    font-size: 25px;
+    font-weight: 500;
+    color: #000;
+    margin-top: 12px;
+}
+
 /* usuário / sair */
+
