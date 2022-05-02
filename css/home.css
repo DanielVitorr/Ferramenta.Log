@@ -1,7 +1,181 @@
-html {
-    height: 100%;
+@import url(https://fonts.google.com/);
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Poppings", sans-serif ;
+
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
+body{
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
 }
+
+/* Barra de navegação */
+.sidebar{
+    position: fixed;
+    height: 100%;
+    width: 80px;
+    background: #01425e;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar.active {
+    width: 240px;
+}
+/* Barra de navegação */
+
+/* logo */
+.logo_content {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar.active .logo_content {
+    padding: auto;
+}
+/* logo */
+
+/* Botão da barra de navegação */
+.sidebar #btn{
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+/* Botão da barra de navegação */
+
+/* Botões de navegação */
+.sidebar ul li{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 5px;
+    list-style: none;
+    line-height: 50px;
+}
+.sidebar ul li .tooltip{
+    position: absolute;
+    left: 112px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 122px;
+    background: #fff;
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: 0s;
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar ul li:hover .tooltip{
+    transition: all 0.5s ease;
+    opacity: 1;
+    top: 50%;
+}
+.sidebar ul li input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #002839;
+    padding-left: 50px;
+    font-size: 18px;
+    color: #fff;
+}
+.sidebar ul li .fa-magnifying-glass{
+    position:absolute;
+    z-index: 99;
+    color: #fff;
+    font-size: 22px;
+}
+.sidebar ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+}
+.sidebar ul li i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+.sidebar ul li a:hover{
+    color: #01425e;
+    background: #fff;
+}
+/* Botões de navegação */
+
+/* usuário / sair */
+.profile_content {
+    position: absolute;
+    width: 88%;
+    bottom: 10px;
+}
+.sidebar .profile_content .profile {
+    position: relative;
+    padding: 10px 6px;
+    height: 50px;
+    background: #002839;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+.sidebar .profile_content .profile .sair a {
+    position: relative;
+    width: 100%;
+    margin-left: 70px;
+    font-size: 25px;
+    color: #fff;
+}
+.sidebar .profile_content .profile .sair .tooltip {
+    position: absolute;
+    left: 110px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    height: 35px;
+    width: 60px;
+    background: rgb(225 225 225 / 50%);
+    line-height: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    transition: 0.5s;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 20px;
+}
+.sidebar .profile_content .profile .sair:hover .tooltip {
+    transition: all 0.5s ease;
+    opacity: 1;
+    color: #fff;
+    font-size: 20px;
+}
+.sidebar .profile_content .profile i {
+    color: #fff;
+    font-size: 30px;
+}
+.sidebar .profile_content .profile p {
+    color: #fff;
+    margin-left: 10px;
+}
+/* usuário / sair */

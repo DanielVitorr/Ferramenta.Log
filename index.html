@@ -11,63 +11,70 @@
     <title>Login</title>
 </head>
 <body>
-<div class="container">
-    <!-- <ul class="squares"></ul> -->
-    <div class="login-box">
-        <img src="" alt="" id="img" height="70">
-        <div class="user-box">
-            <input type="text" name="usuario" id="myInput" required>
-            <label for="usuario"><i class="fa-solid fa-user"></i> Usuário</label>
+    <div class="container_tela">
+        <div class="container_logo">
+            <div class="logo">
+                <img src="./img/logo_GIDT's.png" height="250">
+            </div>
+            <p>Sua ferramenta de gestão de atividades</p>
+            <div class="mySidenav">
+                <div class="etiquetaLogin">
+                    <button class="btnLogin" onclick="ativeLogin();">Login</button>
+                </div>
+                <div class="etiquetaRegistrar">
+                    <button class="btnRegistrar" onclick="ativeRegistrar();">Registar</button>
+                </div>
+            </div>
         </div>
-        <div class="user-box">
-            <input type="password" name="password" id="myPass" required>
-            <label for="password"><i class="fa-solid fa-key"></i> Senha</label>
-        </div>
-        <div class="view-box">
-            <input type="checkbox" onclick="myFunction()">
-            <label>Visualizar Senha</label>
-        </div>
-        <div class="registrar">
-        <a href="Registro.html">
-            <strong>Registrar-se</strong>
-        </a>
-        </div>
-        <a href="./pag_principal/home.html">
-            <strong>ENTRAR</strong>
-        </a>
     </div>
-</div>
     
-    
-    
+    <div class="tela_container" id="tela_container">
+        <div class="login-box">
+            <div class="user-box">
+                <input type="text" name="usuario" id="myInput" required placeholder="Usuário">
+                <i class="fa-solid fa-user" id="user"></i>
+            </div>
+            <div class="user-box">
+                <input type="password" name="password" id="myPass" required placeholder="Senha">
+                <i class="fa-solid fa-key" id="senha"></i>
+            </div>
+            <a href="./pag_principal/home.html" class="btn_entrar">ENTRAR</a>
+        </div>
+        <a class="closebtn_login" onclick="ativeLogin();"><i class="fa-solid fa-circle-xmark"></i></a>
+    </div>
+    <div class="registrar_container" id="registrar_container">
+        <div class="registrar-box">
+            <form action="" method="post">
+                <div class="reg-user-box">
+                    <input type="text" name="usuario" id="user-register" required placeholder="Usuário">
+                    <span><i class="fa-solid fa-user" id="user"></i></span>
+                </div>
+                <div class="reg-password-box">
+                    <input type="email" name="email" id="email-register" required placeholder="Email">
+                    <span><i class="fa-solid fa-envelope" id="email"></i></span>
+                </div>
+                <div class="reg-password-box">
+                    <input type="password" name="conf-password" id="pass-register2" required placeholder="Senha">
+                    <span><i class="fa-solid fa-key" id="senha"></i></span>
+                </div>
+                <div class="btn_registrar">
+                    <button type="submit">Registrar</button>
+                </div>
+            </form>
+        </div>
+        <a class="closebtn_registrar" onclick="ativeRegistrar();"><i class="fa-solid fa-circle-xmark"></i></a>
+    </div>
 
     <script src="./js/login.js"></script>
-
-    <!-- <script>
-        function myFunction() {
-        var view = document.getElementById("myPass");
-        if (view.type === "password") {
-            view.type = "text";
-            } else {
-                view.type = "password";
-            }
+    <script>
+        function ativeLogin() {
+            const telaLogin = document.getElementById('tela_container');
+            telaLogin.classList.toggle('active')
         }
-        function myFunction2() {
-        var view = document.getElementById("pass-register");
-        if (view.type === "password") {
-            view.type = "text";
-            } else {
-                view.type = "password";
-            }
+        function ativeRegistrar() {
+            const telaLogin = document.getElementById('registrar_container');
+            telaLogin.classList.toggle('active')
         }
-        function myFunction3() {
-        var view = document.getElementById("pass-register2");
-        if (view.type === "password") {
-            view.type = "text";
-            } else {
-                view.type = "password";
-            }
-        }
-    </script> -->
+    </script>
 </body>
 </html>
