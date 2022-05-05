@@ -10,27 +10,16 @@
     <title>Timer</title>
 </head>
 <body>
-    <!-- <div class="timer">
-        <span class="timer__part timer__part--minutes">00</span>
-        <span class="timer__part">:</span>
-        <span class="timer__part timer__part--seconds">00</span>
-        <button type="button" class="timer__btn timer__btn--control timer__btn--start">
-            <i class="fa-solid fa-circle-play"></i>
-        </button>
-        <button type="button" class="timer__btn timer__btn--reset">
-            <i class="fa-solid fa-stopwatch"></i>
-        </button>
-    </div>
-    <script src="../js/timer.js" type="module"></script> -->
-
-    <div class="wrapper">
-        <div class="time">
-            <span class="hour">00</span>
-            <span class="colon">:</span>
-            <span class="minute">00</span>
-            <span class="colon">:</span>
-            <span class="second">00</span>
+    <div class="container">
+        <div class="timerDisplay">
+            00 : 00 : 00
+        </div>
+        <div class="buttons">
+            <button id="startTimer">Iniciar</button>
+            <button id="pauseTimer">Pausar</button>
+            <button id="resetTimer">Resetar</button>
         </div>
     </div>
+    <script src="../js/timer.js" type="module"></script>
 </body>
 </html>
