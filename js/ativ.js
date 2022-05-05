@@ -36,6 +36,9 @@ function dragOver(e){
 }
 
 function dragEnter(){
+    // this.style.border= px #ccc;
+    //this.style.border= 1px dashed #ccc;
+    // this.style.border= 1px dashed #ccc;
     // this.style.border= "px #ccc";
     this.style.border= "1px dashed #ccc";
     console.log("dragEnter");
