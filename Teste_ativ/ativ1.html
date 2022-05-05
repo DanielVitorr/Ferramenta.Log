@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./ativ1.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Atividades</title>
+</head>
+<body>
+    <!-- modelo -->
+    <div class="modal" id="todo_form">
+        <div class="header">
+            <div class="title">Adicionar Tarefa</div>
+            <button class="modal-btn" data-target="#modal1">&times;</button>
+        </div>
+        <div class="body">
+            <input type="text" id="todo_input">
+            <input type="submit" value="Adicionar Tarefa" id="todo_submit">
+        </div>
+    </div>
+    <!-- to-do list -->
+    <div class="todo-container">    
+        <div class="status" id="no_status">
+            <h1>Novas Tarefas</h1>
+            <button id="add_btn" data-target-modal="#todo_form">Adcionar Tarefa</button>
+                
+            <!-- parte arrastável,add depois descrição e tempo pra mover automático -->
+        <div class="status">
+            <h1>Em execução</h1>
+        </div>            
+        <div class="status">
+            <h1>Atrasadas</h1>
+        </div>
+            <div class="status">
+            <h1>Concluidas</h1>
+        </div> 
+
+
+    <div id="overlay"></div>
+
+    <script src="./ativ1.js"></script> 
+</body>
+</html>
+
