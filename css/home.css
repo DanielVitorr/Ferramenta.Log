@@ -125,12 +125,43 @@ body{
 /* Botões de navegação */
 
 /* usuário / sair */
-.profile_content {
+.sidebar .profile_content {
     position: absolute;
-    width: 88%;
-    bottom: 10px;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 5px;
+    width: 100%;
+
 }
-.sidebar .profile_content .profile {
+.sidebar .profile_content .profile_detales {
+    position: relative;
+    padding: 10px 6px;
+    height: 60px;
+    background: #002839;
+}
+.sidebar .profile_content .profile_detales .profile {
+    display: flex;
+    align-items: center;
+}
+.profile_detales .profile i {
+    color: #fff;
+    font-size: 30px;
+    object-fit: cover;
+}
+.profile_detales .profile .name {
+    margin-left: 10px;
+}
+.profile_detales .profile .user_name {
+    font-size: 20px;
+    font-weight: 400;
+}
+.profile_detales #log_out {
+    position: absolute;
+    left: 88%;
+    bottom: 5px;
+    transform: translateY(-50%);
+}
+/* .sidebar .profile_content .profile {
     position: relative;
     padding: 10px 6px;
     height: 50px;
@@ -139,8 +170,8 @@ body{
     display: flex;
     align-items: center;
     border-radius: 15px;
-}
-.sidebar .profile_content .profile .sair a {
+} */
+/* .sidebar .profile_content .profile .sair a {
     position: relative;
     width: 100%;
     margin-left: 70px;
@@ -184,7 +215,7 @@ body{
     font-weight: 500;
     color: #000;
     margin-top: 12px;
-}
+} */
 
 /* usuário / sair */
 
