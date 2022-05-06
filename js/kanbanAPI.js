@@ -1,12 +1,44 @@
 export default class KanbanAPI {
     static getItem(columnId) {
-        const column = read().find(column => column.id == columnid);
+        const column = read().find(column => column.id == columnId);
 
         if(!column){
             return[];
         }
 
-        return column.itens;
+        return column.items;
+    }
+
+    static insertItem(columnId,content) {
+        const data = read();
+        const column = data.find(column => column.id == columnId);
+        const item = {
+            id: Math.floor(Math.random() *1000000 ),
+            content: content
+        };
+
+        if(!column) {
+            throw new Error("Essa coluna não existe!");
+        }
+
+        column.items.push(item);
+        save(data);
+
+        return item;
+    }
+
+    static updateItem(itemId, newProps){
+        const data = read();
+        const [item,currentColumn] = (() =>{
+            for(const column of data) {
+                const item = column.items.find(item => item.id == itemId);
+                if (item){
+                    return[item,column];
+                }
+            }
+        });
+
+        console.log(item,currentColumn);
     }
 }
 
@@ -17,19 +49,19 @@ function read() {
         return [
             {    
                 id:1,
-                itens: []
+                items: []
             },
             {    
                 id:2,
-                itens: []
+                items: []
             },
             {    
                 id:3,
-                itens: []
+                items: []
             },
             {    
                 id:4,
-                itens: []
+                items: []
             },
         ];
     }
