@@ -130,51 +130,40 @@ body{
     left: 0;
     bottom: 0;
 }
-.sidebar .content_user .profile_content {
+.sidebar .profile_content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 5px;
+    width: 100%;
+
+}
+.sidebar .profile_content .profile_detales {
     position: relative;
     padding: 10px 6px;
     height: 60px;
+    background: #002839;
 }
-.sidebar .content_user .profile_content .profile {
+.sidebar .profile_content .profile_detales .profile {
     display: flex;
     align-items: center;
 }
-.sidebar .profile_content .profile .sair a {
-    position: relative;
-    width: 100%;
-    margin-left: 70px;
-    font-size: 25px;
-    color: #fff;
-}
-.sidebar .profile_content .profile .sair .tooltip {
-    position: absolute;
-    left: 110px;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 6px;
-    height: 35px;
-    width: 60px;
-    background: rgb(225 225 225 / 50%);
-    line-height: 35px;
-    text-align: center;
-    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
-    transition: 0.5s;
-    opacity: 0;
-    pointer-events: none;
-    font-size: 20px;
-}
-.sidebar .profile_content .profile .sair:hover .tooltip {
-    transition: all 0.5s ease;
-    opacity: 1;
-    color: #fff;
-    font-size: 20px;
-}
-.sidebar .profile_content .profile i {
+.profile_detales .profile i {
     color: #fff;
     font-size: 30px;
+    object-fit: cover;
 }
-.sidebar .profile_content .profile p {
-    color: #fff;
+.profile_detales .profile .name {
     margin-left: 10px;
 }
-/* usuário / sair */
+.profile_detales .profile .user_name {
+    font-size: 20px;
+    font-weight: 400;
+}
+.profile_detales #log_out {
+    position: absolute;
+    left: 88%;
+    bottom: 5px;
+    transform: translateY(-50%);
+}
+

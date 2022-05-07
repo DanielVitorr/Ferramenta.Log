@@ -1,0 +1,105 @@
+.kanban{
+    display: flex;
+    padding: 30px;
+    width: 750px;
+    background: #009578;
+    border-radius: 5px;
+}
+.kanban *{
+    font-family: sans-serif;
+}
+
+.kanban__column{
+    flex: 1;
+}
+
+.kanban__column:not(:last-child){
+    margin-right: 30px;
+}
+
+.kanban__column-title{
+    margin-bottom: 20px;
+    font-size: 30px;
+    color:white;
+    user-select: none;
+}
+
+.kanban__item-input{
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    /* align-items: center;
+    justify-content: space-between; */
+}
+
+.kanban__dropzone{
+    height: 10px;
+    transition: background 0.15s, height 0.15s;
+}
+
+.kanban__dropzone--active{
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.kanban__add-item{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: white;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* TIMER CSS */
+/* .container{
+    background-color: #141313;
+    width: 40%;
+    min-width: 500px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    padding: 60px 0;
+    border-radius: 10px;
+} */
+
+ /* .timerDisplay{
+    position: flex;
+    width: 100%;
+    background-color: #0048ce;
+    
+    left: -5%;
+    padding: 40px 0;
+    font-family: 'Roboto mono',monospace;
+    color: #ffffff;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 139, 253, 0.25);
+}  */
+
+/* .buttons{
+    width: 80%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+} */
+
+/* .buttons button{
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #141313;
+    border: none;
+    font-family: 'Poppings',sans-serif;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}   */
