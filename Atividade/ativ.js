@@ -103,10 +103,10 @@ function createTodo() {
     todo_div.setAttribute("draggable", "true");
     
     /* CRIAR O SPAN */
-    const span = document.createElement("span");
-    const span_txt = document.createTextNode("span");
-    span.classList.add("close");
-    span.appendChild(span_txt);
+    // const span = document.createElement("span");
+    // const span_txt = document.createTextNode("");
+    // span.classList.add("close");
+    // span.appendChild(span_txt);
 
     todo_div.appendChild(span);
 
