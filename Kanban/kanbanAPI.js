@@ -32,13 +32,14 @@ export default class KanbanAPI {
         const [item,currentColumn] = (() =>{
             for(const column of data) {
                 const item = column.items.find(item => item.id == itemId);
+                
                 if (item){
                     return[item,column];
                 }
             }
-        });
+        })();
 
-        console.log(item,currentColumn);
+        // console.log(item,currentColumn);
     }
 }
 
