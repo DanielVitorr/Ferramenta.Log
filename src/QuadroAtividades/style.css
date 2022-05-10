@@ -216,3 +216,54 @@ body
     height: 100%;
     object-fit: cover;
 }
+
+/* quadro de atividades */
+.container_quadro
+{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+.container_torre_quadro
+{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+.container_PIP_quadro
+{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+.container_DM_quadro
+{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+/* titulo de atividades */
+.title_atividade
+{
+    display: flex;
+    font-size: 20px;
+    text-align: start;
+    background-image: linear-gradient(to right, var(--ciano), var(--ciano), transparent, transparent, transparent);
+    color: var(--branco);
+    border-radius: 30px;
+    align-items: center;
+}
+.title_atividade h1
+{
+    margin-left: 15px;
+}
+
+/* atividades */
+.atividade
+{
+    padding: 50px;
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 20px;
+}
