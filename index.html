@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d84f7052ba.js" crossorigin="anonymous"></script>
-    <script src="./login.js" type="text.js"></script>
-    <link rel="stylesheet" href="./login.css">
+    <script src="./src/Login/login.js" type="text.js"></script>
+    <link rel="stylesheet" href="./src/Login/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Login</title>
 </head>
@@ -38,7 +38,7 @@
                 <input type="password" name="password" id="myPass" required placeholder="Senha">
                 <i class="fa-solid fa-key" id="senha"></i>
             </div>
-            <a href="./pag_principal/home.html" class="btn_entrar">ENTRAR</a>
+            <a href="./src/Home/home.html" class="btn_entrar">ENTRAR</a>
         </div>
         <a class="closebtn_login" onclick="ativeLogin();"><i class="fa-solid fa-circle-xmark"></i></a>
     </div>
@@ -65,7 +65,7 @@
         <a class="closebtn_registrar" onclick="ativeRegistrar();"><i class="fa-solid fa-circle-xmark"></i></a>
     </div>
 
-    <script src="./login.js"></script>
+    <script src="./src/Login/login.js"></script>
     <script>
         function ativeLogin() {
             const telaLogin = document.getElementById('tela_container');
