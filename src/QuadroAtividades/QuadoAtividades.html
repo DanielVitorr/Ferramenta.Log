@@ -73,7 +73,39 @@
                 <img src="../../img/user.png" height="50">
             </div>
         </div>
-        <div class="container_quadro">
+<!-- navbar add quadro-->
+        <div class="container_add_quadro">
+            <div class="container_add">
+                <div class="add">
+                    <ul class="add_pages">
+                        <li class="add_pages_list">
+                            <button>
+                                <div class="pages_style_add">
+                                    <span class="title_pages"><i class="fa-solid fa-circle-plus"></i></span>
+                                    <span class="title_pages">Novo Bloco de Atividades</span>
+                                </div>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+<!-- quadro de atividades -->
+            <div class="container_torre">
+                <div class="title_atividade">
+                    <h1>Favoritos</h1>
+                </div>
+                <div class="container_torre_quadro">
+                    <ul class="bord_pages">
+                        <li class="bord_pages_list">
+                            <a href="">
+                                <div class="pages_style">
+                                    <span class="title_pages">Projeto X</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="container_torre">
                 <div class="title_atividade">
                     <h1>Torre de Controle</h1>
@@ -81,12 +113,22 @@
                 <div class="container_torre_quadro">
                     <ul class="bord_pages">
                         <li class="bord_pages_list">
-                            <a href="">
-                                <div class="pages_style">
-                                    <span class="title_pages">Projeto X<span>
+                            <button>
+                                <div class="add_style">
+                                    <span class="add_pag"><i class="fa-solid fa-circle-plus"></i></span>
+                                    <span class="title_add_pag">Novo Quadro de Atividades</span>
                                 </div>
-                            </a>
+                            </button>
                         </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container_PIP">
+                <div class="title_atividade">
+                    <h1>P&P</h1>
+                </div>
+                <div class="container_PIP_quadro">
+                    <ul class="bord_pages">
                         <li class="bord_pages_list">
                             <a href="">
                                 <div class="pages_style">
@@ -101,13 +143,15 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="bord_pages_list">
-                            <a href="">
-                                <div class="pages_style">
-                                    <span class="title_pages">Projeto X</span>
-                                </div>
-                            </a>
-                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container_DM">
+                <div class="title_atividade">
+                    <h1>Unidades</h1>
+                </div>
+                <div class="container_DM_quadro">
+                    <ul class="bord_pages">
                         <li class="bord_pages_list">
                             <a href="">
                                 <div class="pages_style">
@@ -137,26 +181,6 @@
                             </a>
                         </li>
                     </ul>
-                    <!-- <div class="atividade"><p>Projeto X</p></div>
-                    <div class="atividade"><ion-icon name="add-circle-outline"></ion-icon></div> -->
-                </div>
-            </div>
-            <div class="container_P&P">
-                <div class="title_atividade">
-                    <h1>P&P</h1>
-                </div>
-                <div class="container_PIP_quadro">
-                    <div class="atividade">Projeto Y</div>
-                    <div class="atividade"><ion-icon name="add-circle-outline"></ion-icon></div>
-                </div>
-            </div>
-            <div class="container_DM">
-                <div class="title_atividade">
-                    <h1>Unidades</h1>
-                </div>
-                <div class="container_DM_quadro">
-                    <div class="atividade">Projeto Z</div>
-                    <div class="atividade"><ion-icon name="add-circle-outline"></ion-icon></div>
                 </div>
             </div>
         </div>
@@ -169,7 +193,7 @@
         let toggle = document.querySelector('.toggle')
         let navegation = document.querySelector('.navegation')
         let main = document.querySelector('.main')
-        
+
         toggle.onclick = function() {
             navegation.classList.toggle('active')
             main.classList.toggle('active')

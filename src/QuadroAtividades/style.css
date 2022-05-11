@@ -15,11 +15,13 @@
     --cinza: #dddddd56;
     --preto1: #222;
     --preto2: #999;
+    --preto3: #0000000d;
 }
 body
 {
     min-height: 100vh;
     overflow-x: hidden;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
@@ -231,19 +233,33 @@ body
 }
 .container_PIP_quadro
 {
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
+    display: block;
 }
 .container_DM_quadro
 {
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
+    display: block;
+}
+.container_torre
+{
+    border: 1px solid var(--preto2);
+    background: var(--preto3);
+    margin: 15px;
+}
+.container_PIP
+{
+    border: 1px solid var(--preto2);
+    background: var(--preto3);
+    margin: 15px;
+}
+.container_DM
+{
+    border: 1px solid var(--preto2);
+    background: var(--preto3);
+    margin: 15px;
 }
 
 /* titulo de atividades */
-.title_atividade
+/* .title_atividade
 {
     display: flex;
     font-size: 20px;
@@ -253,10 +269,12 @@ body
     border-radius: 30px;
     align-items: center;
     margin: 10px;
-}
+} */
 .title_atividade h1
 {
     margin-left: 15px;
+    border-bottom: 1px solid var(--preto2);
+    margin-right: 15px;
 }
 
 /* atividades */
@@ -271,7 +289,7 @@ body
 .bord_pages
 {
     display: flex;
-    padding: 50px;
+    padding: 10px;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
@@ -282,11 +300,11 @@ body
 .bord_pages_list
 {
     margin: 5px;
-    padding: 30px;
     transform: translate(0);
-    width: 25%;
-    height: 75%;
-    border: 1px solid;
+    width: 200px;
+    height: 120px;
+    border: 1px solid var(--preto2);
+    border-radius: 20px;
 }
 .pages_style
 {
@@ -295,4 +313,46 @@ body
     height: 80px;
     justify-content: space-between;
     position: relative;
+}
+.pages_style_add
+{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* navbar add quadro */
+.add_style
+{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.add_style span
+{
+    margin: 3px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.add_pages_list button
+{
+    border: 1px solid var(--preto2);
+    background: var(--preto3);
+    width: 100%;
+    cursor: pointer;
+}
+.add_pages_list
+{
+    margin: 15px;
+
+}
+.add_pages_list::marker
+{
+    color: transparent;
 }
