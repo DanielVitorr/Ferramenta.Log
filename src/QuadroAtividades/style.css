@@ -8,6 +8,7 @@
 {
     --azul_ciano1: #001c31;
     --azul_ciano2: #143045;
+    --azul_ciano3: #1430458c;
     --ciano: #01425e;
     --verde_ciano1: #00a887;
     --verde_ciano2: #09b18e;
@@ -16,6 +17,7 @@
     --preto1: #222;
     --preto2: #999;
     --preto3: #0000000d;
+    --amarelo: #daa520;
 }
 body
 {
@@ -270,10 +272,35 @@ body
     align-items: center;
     margin: 10px;
 } */
-.title_atividade h1
+.title_atividade
 {
     margin-left: 15px;
+}
+.icon_atividade button
+{
+    padding: 7px 7px;
+    border: none;
+    border-radius: 30px;
+    background: var(--azul_ciano1);
+    cursor: pointer;
+    color: var(--branco);
+}
+.icon_atividade button i
+{
+    margin-left: 5px;
+}
+.icon_atividade button:hover
+{
+    background: var(--ciano);
+    border: none;
+}
+.container_torre_1
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid var(--preto2);
+    margin-left: 15px;
     margin-right: 15px;
 }
 
@@ -305,12 +332,13 @@ body
     height: 120px;
     border: 1px solid var(--preto2);
     border-radius: 20px;
+    box-shadow: 0 0px 10px var(--preto2);
 }
 .pages_style
 {
     display: flex;
     flex-direction: column;
-    height: 80px;
+    height: 80%;
     justify-content: space-between;
     position: relative;
 }
@@ -350,9 +378,81 @@ body
 .add_pages_list
 {
     margin: 15px;
-
+}
+.bord_add_pages_list
+{
+    margin: 5px;
+    transform: translate(0);
+    width: 200px;
+    height: 120px;
+}
+.bord_add_pages_list button
+{
+    border: 1px solid var(--preto2);
+    border-radius: 20px;
+    background: var(--cinza);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    box-shadow: 0 0px 10px var(--preto2);
 }
 .add_pages_list::marker
 {
     color: transparent;
+}
+.add_pages_list button:hover
+{
+    background: var(--ciano);
+    color: var(--branco);
+}
+.bord_add_pages_list::marker
+{
+    color: transparent;
+}
+.bord_add_pages_list button:hover
+{
+    background: var(--ciano);
+    color: var(--branco);
+}
+
+.add_quadro_style
+{
+    display: flex;
+    flex-direction: column;
+}
+.add_pag
+{
+    font-size: 25px;
+}
+
+.title_pages
+{
+    margin: 10px;
+    text-decoration: none;
+}
+.bord_pages_list button
+{
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 88%;
+}
+.bord_pages_list button:hover
+{
+    color: var(--amarelo);
+}
+.bord_pages_list a:link
+{
+    text-decoration: none;
+}
+
+.icon_bloco
+{
+    margin: 5px;
+    font-size: 20px;
+}
+.title_bloco
+{
+    font-size: 15px;
 }
