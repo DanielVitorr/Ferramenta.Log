@@ -1,11 +1,10 @@
-*
-{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root
-{
+
+:root{
     --azul_ciano1: #001c31;
     --azul_ciano2: #143045;
     --azul_ciano3: #1430458c;
@@ -18,23 +17,24 @@
     --preto2: #999;
     --preto3: #0000000d;
     --amarelo: #daa520;
+
+    --azul: #0000ff;
 }
-body
-{
+
+body{
     min-height: 100vh;
     overflow-x: hidden;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
-.container
-{
+/* ------------------------------------------------------------------------------------------------ */
+/* barra de navegation */
+.container{
     position: relative;
     width: 100%;
     display: flex;
 }
-.navegation
-{
+.navegation{
     position: fixed;
     width: 75px;
     height: 100%;
@@ -44,38 +44,30 @@ body
     transition: 0.5s;
     overflow: hidden;
 }
-.navegation.active
-{
+.navegation.active{
     width: 240px;
 }
-.navegation ul
-{
+.navegation ul{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 }
-.navegation ul li
-{
+.navegation ul li{
     position: relative;
     width: 100%;
     height: 50px;
     list-style: none;
-    /* border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px; */
     border-radius: 30px;
 }
-.navegation ul li:hover
-{
+.navegation ul li:hover{
     background: var(--branco)
 }
-.navegation ul li:nth-child(1)
-{
+.navegation ul li:nth-child(1){
     margin-bottom: 40px;
     pointer-events: none;
 }
-.navegation ul li a
-{
+.navegation ul li a{
     position: relative;
     display: block;
     width: 100%;
@@ -85,12 +77,10 @@ body
     color: var(--branco);
     align-items: center;
 }
-.navegation ul li:hover a
-{
+.navegation ul li:hover a{
     color: var(--azul_ciano2);
 }
-.navegation ul li a .icon
-{
+.navegation ul li a .icon{
     position: relative;
     display: block;
     min-width: 54px;
@@ -98,12 +88,10 @@ body
     line-height: 75px;
     text-align: center;
 }
-.navegation ul li a .icon ion-icon
-{
+.navegation ul li a .icon ion-icon{
     font-size: 1.75em;
 }
-.navegation ul li a .title
-{
+.navegation ul li a .title{
     position: relative;
     display: block;
     height: 60px;
@@ -112,36 +100,10 @@ body
     white-space: nowrap;
     margin-left: 5px;
 }
-/* .navegation ul li:hover a::before
-{
-    content: '';
-    position: absolute;
-    right: 0;
-    top: -100%;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border-radius: 50%;
-    box-shadow: 35px 35px 0 10px var(--branco);
-    pointer-events: none;
-}
-.navegation ul li:hover a::after
-{
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: -100%;
-    width: 50px;
-    height: 50px;
-    background: transparent;
-    border-radius: 50%;
-    box-shadow: 35px -35px 0 10px var(--branco);
-    pointer-events: none;
-} */
-
+/* barra de navegation */
+/* ------------------------------------------------------------------------------------------------ */
 /* topbar */
-.main
-{
+.main{
     position: absolute;
     width: calc(100% - 75px);
     left: 75px;
@@ -149,13 +111,11 @@ body
     background: var(--branco);
     transition: 0.5s;
 }
-.main.active
-{
+.main.active{
     width: calc(100% - 230px);
     left: 240px;
 }
-.topbar
-{
+.topbar{
     width: 100%;
     height: 60px;
     display: flex;
@@ -164,8 +124,7 @@ body
     padding: 0 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
-.toggle
-{
+.toggle{
     position: relative;
     width: 60px;
     height: 60px;
@@ -175,19 +134,16 @@ body
     font-size: 2.5em;
     cursor: pointer;
 }
-.search
-{
+.search{
     position: relative;
     width: 400px;
     margin: 0 10px;
 }
-.search label
-{
+.search label{
     position: relative;
     width: 100%;
 }
-.search label input
-{
+.search label input{
     width: 100%;
     height: 40px;
     border-radius: 40px;
@@ -197,23 +153,20 @@ body
     outline: none;
     border: 1px solid var(--preto2);
 }
-.search label ion-icon
-{
+.search label ion-icon{
     position: absolute;
     top: -1px;
     left: 10px;
     font-size: 1.2em;
 }
-.user
-{
+.user{
     position: relative;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
 }
-.user img
-{
+.user img{
     position: absolute;
     top: 0;
     left: 0;
@@ -221,63 +174,84 @@ body
     height: 100%;
     object-fit: cover;
 }
-
+/* topbar */
+/* ------------------------------------------------------------------------------------------------ */
 /* quadro de atividades */
-.container_quadro
-{
+.container_quadro{
     display: flex;
     flex-direction: column;
     background: var(--cinza)
 }
-.container_torre_quadro
-{
+.container_torre_quadro{
     display: block;
 }
-.container_PIP_quadro
-{
+.container_PIP_quadro{
     display: block;
 }
-.container_DM_quadro
-{
+.container_DM_quadro{
     display: block;
 }
-.container_torre
-{
+.container_favorito{
     border: 1px solid var(--preto2);
     background: var(--preto3);
     margin: 15px;
 }
-.container_PIP
-{
+.container_torre{
     border: 1px solid var(--preto2);
     background: var(--preto3);
     margin: 15px;
 }
-.container_DM
-{
+.container_PIP{
     border: 1px solid var(--preto2);
     background: var(--preto3);
     margin: 15px;
 }
-
-/* titulo de atividades */
-/* .title_atividade
-{
-    display: flex;
-    font-size: 20px;
-    text-align: start;
-    background-image: linear-gradient(to right, var(--ciano), var(--ciano), transparent, transparent, transparent);
+.container_DM{
+    border: 1px solid var(--preto2);
+    background: var(--preto3);
+    margin: 15px;
+}
+/* quadro de atividades */
+/* ------------------------------------------------------------------------------------------------ */
+/* navbar add quadro */
+.add_pages_list{
+    margin: 15px;
+}
+.add_pages_list::marker{
+    color: transparent;
+}
+.add_pages_list button:hover{
+    background: var(--ciano);
     color: var(--branco);
-    border-radius: 30px;
+}
+.add_pages_list button{
+    border: 1px solid var(--preto2);
+    background: var(--preto3);
+    width: 100%;
+    cursor: pointer;
+}
+.icon_bloco{
+    margin: 5px;
+    font-size: 20px;
+}
+.title_bloco{
+    font-size: 15px;
+}
+.pages_style_add{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    justify-content: center;
     align-items: center;
-    margin: 10px;
-} */
-.title_atividade
-{
+    position: relative;
+}
+/* navbar add quadro */
+/* ------------------------------------------------------------------------------------------------ */
+/* titulo de quadro */
+.title_atividade{
     margin-left: 15px;
 }
-.icon_atividade button
-{
+.icon_atividade button{
     padding: 7px 7px;
     border: none;
     border-radius: 30px;
@@ -285,17 +259,14 @@ body
     cursor: pointer;
     color: var(--branco);
 }
-.icon_atividade button i
-{
+.icon_atividade button i{
     margin-left: 5px;
 }
-.icon_atividade button:hover
-{
+.icon_atividade button:hover{
     background: var(--ciano);
     border: none;
 }
-.container_torre_1
-{
+.container_torre_1{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -303,29 +274,19 @@ body
     margin-left: 15px;
     margin-right: 15px;
 }
-
+/* titulo de atividades */
+/* ------------------------------------------------------------------------------------------------ */
 /* atividades */
-.atividade
-{
-    padding: 50px;
-    margin: 10px;
-    border: 1px solid;
-    border-radius: 20px;
-}
-
-.bord_pages
-{
+.bord_pages{
     display: flex;
     padding: 10px;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-.bord_pages_list::marker
-{
+.bord_pages_list::marker{
     color: transparent;
 }
-.bord_pages_list
-{
+.bord_pages_list{
     margin: 5px;
     transform: translate(0);
     width: 200px;
@@ -334,60 +295,40 @@ body
     border-radius: 20px;
     box-shadow: 0 0px 10px var(--preto2);
 }
-.pages_style
-{
+.pages_style{
     display: flex;
     flex-direction: column;
     height: 80%;
     justify-content: space-between;
     position: relative;
 }
-.pages_style_add
-{
-    display: flex;
-    flex-direction: row;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-/* navbar add quadro */
-.add_style
-{
-    display: flex;
-    flex-direction: row;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-.add_style span
-{
-    margin: 3px;
+.title_pages{
+    margin: 10px;
     text-decoration: none;
+}
+.bord_pages_list button{
+    text-decoration: none;
+    background: transparent;
+    border: none;
     cursor: pointer;
+    margin-left: 88%;
 }
-.add_pages_list button
-{
-    border: 1px solid var(--preto2);
-    background: var(--preto3);
-    width: 100%;
-    cursor: pointer;
+.bord_pages_list button:hover{
+    color: var(--amarelo);
 }
-.add_pages_list
-{
-    margin: 15px;
+.bord_pages_list a:link{
+    text-decoration: none;
 }
-.bord_add_pages_list
-{
+/* atividades */
+/* ------------------------------------------------------------------------------------------------ */
+/* add atividades */
+.bord_add_pages_list{
     margin: 5px;
     transform: translate(0);
     width: 200px;
     height: 120px;
 }
-.bord_add_pages_list button
-{
+.bord_add_pages_list button{
     border: 1px solid var(--preto2);
     border-radius: 20px;
     background: var(--cinza);
@@ -396,63 +337,31 @@ body
     cursor: pointer;
     box-shadow: 0 0px 10px var(--preto2);
 }
-.add_pages_list::marker
-{
+.bord_add_pages_list::marker{
     color: transparent;
 }
-.add_pages_list button:hover
-{
+.bord_add_pages_list button:hover{
     background: var(--ciano);
     color: var(--branco);
 }
-.bord_add_pages_list::marker
-{
-    color: transparent;
-}
-.bord_add_pages_list button:hover
-{
-    background: var(--ciano);
-    color: var(--branco);
-}
-
-.add_quadro_style
-{
+.add_quadro_style{
     display: flex;
     flex-direction: column;
 }
-.add_pag
-{
+.add_pag{
     font-size: 25px;
 }
+/* add atividades */
 
-.title_pages
-{
-    margin: 10px;
-    text-decoration: none;
-}
-.bord_pages_list button
-{
-    text-decoration: none;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    margin-left: 88%;
-}
-.bord_pages_list button:hover
-{
-    color: var(--amarelo);
-}
-.bord_pages_list a:link
-{
-    text-decoration: none;
-}
 
-.icon_bloco
-{
-    margin: 5px;
-    font-size: 20px;
-}
-.title_bloco
-{
-    font-size: 15px;
-}
+
+
+
+
+
+
+
+
+
+
+
