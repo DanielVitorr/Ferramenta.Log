@@ -17,8 +17,19 @@
     --preto2: #999;
     --preto3: #0000000d;
     --amarelo: #daa520;
-
-    --azul: #0000ff;
+    /* verde */
+    --verde1: #e7ffde;
+    --verde2: #ceffbc;
+    --verde3: #b1ff9a;
+    --verde4: #90ff77;
+    --verde5: #66ff4f;
+    --verde6: #00ff00;
+    --verde7: #1ed013;
+    --verde8: #24a319;
+    --verde9: #247719;
+    --verde10: #1f4f16;
+    --verde11: #162a10;
+    /* verde */
 }
 
 body{
@@ -38,9 +49,9 @@ body{
     position: fixed;
     width: 75px;
     height: 100%;
-    background: var(--azul_ciano1);
-    border-left: 11px solid var(--azul_ciano1);
-    border-right: 11px solid var(--azul_ciano1);
+    background: linear-gradient(var(--azul_ciano1), var(--verde10));
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
     transition: 0.5s;
     overflow: hidden;
 }
@@ -352,7 +363,16 @@ body{
     font-size: 25px;
 }
 /* add atividades */
-
+/* ------------------------------------------------------------------------------------------------ */
+/* tela add quadro */
+.add_container_main{
+    position: absolute;
+    width: calc(100% - 75px);
+    left: 75px;
+    min-height: 100vh;
+    background: var(--branco);
+    transition: 0.5s;
+}
 
 
 
