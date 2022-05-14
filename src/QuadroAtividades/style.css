@@ -365,14 +365,6 @@ body{
 /* add atividades */
 /* ------------------------------------------------------------------------------------------------ */
 /* tela add quadro */
-.add_container_main{
-    position: absolute;
-    width: calc(100% - 75px);
-    left: 75px;
-    min-height: 100vh;
-    background: var(--branco);
-    transition: 0.5s;
-}
 
 
 
