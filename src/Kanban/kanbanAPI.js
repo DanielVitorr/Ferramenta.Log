@@ -27,10 +27,11 @@ export default class KanbanAPI {
         return item;
     }
 
-    static updateItem(itemId, newProps){
+    static updateItem(itemId, newProps) {
         const data = read();
-        const [item,currentColumn] = (() =>{
-            for(const column of data) {
+        const [item, currentColumn] = (() => 
+        {
+            for (const column of data) {
                 const item = column.items.find(item => item.id == itemId);
                 
                 if (item){
@@ -39,7 +40,45 @@ export default class KanbanAPI {
             }
         })();
 
-        // console.log(item,currentColumn);
+        if (!item){
+            throw new Error("Item não encontrado");
+        }
+        
+        item.content = newProps.content === undefined ? item.content : newProps.content ;
+
+        // atualizar coluna r posição 
+        if(
+            newProps.columnId !== undefined
+            && newProps.position !== undefined
+        ) {
+            const targetColumn = data.find(column => columnId == newProps.columnId);
+
+            if (!targetColumn) {
+                throw new Error ("Target not found.");
+            }
+
+            //delerar o item da coluna que tá
+            currentColumn.items.splice(currentColumn.items.indexOf(item),1);
+
+            //mover o item para a coluna nova e posição 
+            targetColumn.items.splice(newProps.position,0, item);
+        } 
+
+        save(data);
+    }
+
+    static deleteItem(itemId) {
+        const data = read();
+
+        for (const column of data ) {
+            const item = column.itens.find(item => item.id == itemId);
+
+            if(item){
+                column.items.splice(column.items.indexOf(item),1);
+            }
+        }
+
+        save(data);
     }
 }
 
