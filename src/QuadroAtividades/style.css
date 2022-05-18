@@ -219,6 +219,7 @@ body{
     left: 75px;
     min-height: 100vh;
     background: var(--cinzento1);
+    transition: 0.5s;
 }
 .main.active{
     width: calc(100% - 230px);
