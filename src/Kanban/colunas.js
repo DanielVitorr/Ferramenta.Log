@@ -1,3 +1,5 @@
+import Item from "./item";
+
 export default class Column {
     constructor(id,title) {
         //representa uma única coluna na interface
@@ -10,6 +12,14 @@ export default class Column {
 
         this.elements.root.dataset.id = id;
         this.elements.root.dataset.textContent = title;
+
+        this.elements.addItem.addEventListener("click",() => {
+
+        });
+
+        KanbanAPI.getItems(id).forEach(item => {
+            this.renderItem(item);
+        });
     }
 
     static createRoot() {
@@ -24,5 +34,11 @@ export default class Column {
                 <button class="kanban__add-item" type="button"> + Adicionar </button>    
             </div>
         `).children[0];
+    }
+
+    renderItem(data) {
+        const item = new Item(data.id, data.content);
+
+        this.elements.items.appendChild(item.elements.root);
     }
 }
