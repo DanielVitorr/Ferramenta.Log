@@ -10,36 +10,63 @@ body {
 .boards {
     display:flex;
     justify-content: space-between;
-    position: flex;
-    /* max-width: 350px;
-    max-height: 350px; */
+    width: 100%;
+}
 
-    /* margin-top: 32px; */
+.boardquadro {
+    background:#ccc;
+    border: 1px solid #fd951f11;
+    border-radius: 6px;
+    margin: 0 16px;
+    display:flex;
+    justify-content:space-between;
+    width: 100%;
 }
 
 .board {
-    background: #141316;
+    background: #ccc;
     border: 1px solid #fd951f11;
     border-radius: 4px;
     margin: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
  
+
+
 .board h3 {
     padding: 16px ;
     margin: 0;
     color: #fd951fcc;
 }
 
+
+.button {
+    color: #ffffff;
+    width: 45%;
+    margin: 5px auto 5px auto;
+    display: flex;
+    justify-content:space-between;
+    /* padding: 12px 15px;  */
+    cursor: pointer;
+}
 .dropzone {
     padding: 16px;
     min-height: 300px;
     min-height: 200px;
 }
 
+.drop{
+    display:flex;
+    justify-content: space-between;
+}
+
 .card {
     padding: 16px;
     box-shadow:  2px 2px -1px #fd951fcc;
-    width: 1000px;
+    width: 350px;
+    height: 250px;
     margin: 25px 0;
     border-radius: 4px;
     font-weight:600px;
@@ -48,14 +75,14 @@ body {
 }
 
  .status{
-    width: 15px;
+    width: 25px;
     height: 10px;
     margin-bottom: 14px;
     border-radius: 8px;
     background: white;
 } 
 
-/* .status.blue {
+.status.blue {
     background:blue;
 }
 
@@ -68,24 +95,24 @@ body {
 }
 .status.yellow {
     background:yellow;
-} */
+} 
 
 
 
 /* CSS DO TIMER */
 
 .timer_container{
-    background-color: #141313;
-    padding: 60px 0;
+    background-color: #ccc;
+    padding: 10px 0;
     border-radius: 10px;
-    position: flex;
+    position: absolute;
 }
 
 .timerDisplay{
     position: flex;
     width: 100%;
     background-color: #0048ce;     
-    left: -5%;
+    left: -5%; 
     padding: 2px 0; 
     font-family: 'Roboto mono',monospace;
     color: #ffffff;
@@ -98,10 +125,10 @@ body {
 }
 
 .buttons{
-    width: 100%;
-    margin: 12px auto 12px auto;
+    width: 50%;
+    margin: 5px auto 10px auto;
     display: flex;
-    justify-content: space-around;
+    justify-content:center;
 } 
 
 .buttons button{
@@ -113,4 +140,5 @@ body {
     font-size: 11px;
     border-radius: 5px;
     cursor: pointer;
+    justify-content: space-between;
 } 
